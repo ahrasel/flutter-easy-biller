@@ -1,4 +1,3 @@
-
 class ModelHelpers {
   Map<String, dynamic> fromDocument(dynamic data) {
     data['createdAt'] = dateFromDocument(data['createdAt']);
@@ -18,7 +17,7 @@ class ModelHelpers {
     return json;
   }
 
-  String dateFromDocument(dynamic? date) {
+  String dateFromDocument(dynamic date) {
     if (date != null) {
       return date.toDate().toString();
     }

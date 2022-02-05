@@ -19,7 +19,7 @@ void main() async {
   await GetStorage.init();
   DependencyInjection.init();
 
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 Future<void> initFirebase() async {
@@ -29,10 +29,12 @@ Future<void> initFirebase() async {
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      title: 'Golpo Kotha',
+      title: 'Easy Biller',
       debugShowCheckedModeBanner: false,
       theme: Themes().lightTheme,
       darkTheme: Themes().darkTheme,

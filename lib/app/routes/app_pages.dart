@@ -12,7 +12,7 @@ const _defaultTransition = Transition.native;
 class AppPages {
   static final unknownRoutePage = GetPage(
     name: AppRoutes.unknown,
-    page: () => UnknownRoutePage(),
+    page: () => const UnknownRoutePage(),
     transition: _defaultTransition,
   );
 
