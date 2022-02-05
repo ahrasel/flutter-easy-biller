@@ -1,3 +1,5 @@
+import '../bindings/login_binding.dart';
+import '../ui/pages/login_page/login_page.dart';
 import '../bindings/splash_binding.dart';
 import '../ui/pages/splash_page/splash_page.dart';
 import 'package:get/get.dart';
@@ -28,6 +30,12 @@ class AppPages {
       name: AppRoutes.splash,
       page: () => const SplashPage(),
       binding: SplashBinding(),
+      transition: _defaultTransition,
+    ),
+    GetPage(
+      name: AppRoutes.login,
+      page: () => LoginPage(),
+      binding: LoginBinding(),
       transition: _defaultTransition,
     ),
   ];
