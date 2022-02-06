@@ -65,6 +65,12 @@ class _$FirestoreFailureTearOff {
   _InvalidEmail invalidEmail() {
     return const _InvalidEmail();
   }
+
+  _RecordAlreadyExist recordAlreadyExist({required String message}) {
+    return _RecordAlreadyExist(
+      message: message,
+    );
+  }
 }
 
 /// @nodoc
@@ -86,6 +92,7 @@ mixin _$FirestoreFailure {
     required TResult Function() weakPassword,
     required TResult Function() operationNotAllowed,
     required TResult Function() invalidEmail,
+    required TResult Function(String message) recordAlreadyExist,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -102,6 +109,7 @@ mixin _$FirestoreFailure {
     TResult Function()? weakPassword,
     TResult Function()? operationNotAllowed,
     TResult Function()? invalidEmail,
+    TResult Function(String message)? recordAlreadyExist,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -118,6 +126,7 @@ mixin _$FirestoreFailure {
     TResult Function()? weakPassword,
     TResult Function()? operationNotAllowed,
     TResult Function()? invalidEmail,
+    TResult Function(String message)? recordAlreadyExist,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -136,6 +145,7 @@ mixin _$FirestoreFailure {
     required TResult Function(_WeakPassword value) weakPassword,
     required TResult Function(_OperationNotAllowed value) operationNotAllowed,
     required TResult Function(_InvalidEmail value) invalidEmail,
+    required TResult Function(_RecordAlreadyExist value) recordAlreadyExist,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -152,6 +162,7 @@ mixin _$FirestoreFailure {
     TResult Function(_WeakPassword value)? weakPassword,
     TResult Function(_OperationNotAllowed value)? operationNotAllowed,
     TResult Function(_InvalidEmail value)? invalidEmail,
+    TResult Function(_RecordAlreadyExist value)? recordAlreadyExist,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -168,6 +179,7 @@ mixin _$FirestoreFailure {
     TResult Function(_WeakPassword value)? weakPassword,
     TResult Function(_OperationNotAllowed value)? operationNotAllowed,
     TResult Function(_InvalidEmail value)? invalidEmail,
+    TResult Function(_RecordAlreadyExist value)? recordAlreadyExist,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -243,6 +255,7 @@ class _$_Unexpected implements _Unexpected {
     required TResult Function() weakPassword,
     required TResult Function() operationNotAllowed,
     required TResult Function() invalidEmail,
+    required TResult Function(String message) recordAlreadyExist,
   }) {
     return unexpected();
   }
@@ -262,6 +275,7 @@ class _$_Unexpected implements _Unexpected {
     TResult Function()? weakPassword,
     TResult Function()? operationNotAllowed,
     TResult Function()? invalidEmail,
+    TResult Function(String message)? recordAlreadyExist,
   }) {
     return unexpected?.call();
   }
@@ -281,6 +295,7 @@ class _$_Unexpected implements _Unexpected {
     TResult Function()? weakPassword,
     TResult Function()? operationNotAllowed,
     TResult Function()? invalidEmail,
+    TResult Function(String message)? recordAlreadyExist,
     required TResult orElse(),
   }) {
     if (unexpected != null) {
@@ -305,6 +320,7 @@ class _$_Unexpected implements _Unexpected {
     required TResult Function(_WeakPassword value) weakPassword,
     required TResult Function(_OperationNotAllowed value) operationNotAllowed,
     required TResult Function(_InvalidEmail value) invalidEmail,
+    required TResult Function(_RecordAlreadyExist value) recordAlreadyExist,
   }) {
     return unexpected(this);
   }
@@ -324,6 +340,7 @@ class _$_Unexpected implements _Unexpected {
     TResult Function(_WeakPassword value)? weakPassword,
     TResult Function(_OperationNotAllowed value)? operationNotAllowed,
     TResult Function(_InvalidEmail value)? invalidEmail,
+    TResult Function(_RecordAlreadyExist value)? recordAlreadyExist,
   }) {
     return unexpected?.call(this);
   }
@@ -343,6 +360,7 @@ class _$_Unexpected implements _Unexpected {
     TResult Function(_WeakPassword value)? weakPassword,
     TResult Function(_OperationNotAllowed value)? operationNotAllowed,
     TResult Function(_InvalidEmail value)? invalidEmail,
+    TResult Function(_RecordAlreadyExist value)? recordAlreadyExist,
     required TResult orElse(),
   }) {
     if (unexpected != null) {
@@ -409,6 +427,7 @@ class _$_InsufficientPermission implements _InsufficientPermission {
     required TResult Function() weakPassword,
     required TResult Function() operationNotAllowed,
     required TResult Function() invalidEmail,
+    required TResult Function(String message) recordAlreadyExist,
   }) {
     return insufficientPermission();
   }
@@ -428,6 +447,7 @@ class _$_InsufficientPermission implements _InsufficientPermission {
     TResult Function()? weakPassword,
     TResult Function()? operationNotAllowed,
     TResult Function()? invalidEmail,
+    TResult Function(String message)? recordAlreadyExist,
   }) {
     return insufficientPermission?.call();
   }
@@ -447,6 +467,7 @@ class _$_InsufficientPermission implements _InsufficientPermission {
     TResult Function()? weakPassword,
     TResult Function()? operationNotAllowed,
     TResult Function()? invalidEmail,
+    TResult Function(String message)? recordAlreadyExist,
     required TResult orElse(),
   }) {
     if (insufficientPermission != null) {
@@ -471,6 +492,7 @@ class _$_InsufficientPermission implements _InsufficientPermission {
     required TResult Function(_WeakPassword value) weakPassword,
     required TResult Function(_OperationNotAllowed value) operationNotAllowed,
     required TResult Function(_InvalidEmail value) invalidEmail,
+    required TResult Function(_RecordAlreadyExist value) recordAlreadyExist,
   }) {
     return insufficientPermission(this);
   }
@@ -490,6 +512,7 @@ class _$_InsufficientPermission implements _InsufficientPermission {
     TResult Function(_WeakPassword value)? weakPassword,
     TResult Function(_OperationNotAllowed value)? operationNotAllowed,
     TResult Function(_InvalidEmail value)? invalidEmail,
+    TResult Function(_RecordAlreadyExist value)? recordAlreadyExist,
   }) {
     return insufficientPermission?.call(this);
   }
@@ -509,6 +532,7 @@ class _$_InsufficientPermission implements _InsufficientPermission {
     TResult Function(_WeakPassword value)? weakPassword,
     TResult Function(_OperationNotAllowed value)? operationNotAllowed,
     TResult Function(_InvalidEmail value)? invalidEmail,
+    TResult Function(_RecordAlreadyExist value)? recordAlreadyExist,
     required TResult orElse(),
   }) {
     if (insufficientPermission != null) {
@@ -575,6 +599,7 @@ class _$_PermissionDenied implements _PermissionDenied {
     required TResult Function() weakPassword,
     required TResult Function() operationNotAllowed,
     required TResult Function() invalidEmail,
+    required TResult Function(String message) recordAlreadyExist,
   }) {
     return permissionDenied();
   }
@@ -594,6 +619,7 @@ class _$_PermissionDenied implements _PermissionDenied {
     TResult Function()? weakPassword,
     TResult Function()? operationNotAllowed,
     TResult Function()? invalidEmail,
+    TResult Function(String message)? recordAlreadyExist,
   }) {
     return permissionDenied?.call();
   }
@@ -613,6 +639,7 @@ class _$_PermissionDenied implements _PermissionDenied {
     TResult Function()? weakPassword,
     TResult Function()? operationNotAllowed,
     TResult Function()? invalidEmail,
+    TResult Function(String message)? recordAlreadyExist,
     required TResult orElse(),
   }) {
     if (permissionDenied != null) {
@@ -637,6 +664,7 @@ class _$_PermissionDenied implements _PermissionDenied {
     required TResult Function(_WeakPassword value) weakPassword,
     required TResult Function(_OperationNotAllowed value) operationNotAllowed,
     required TResult Function(_InvalidEmail value) invalidEmail,
+    required TResult Function(_RecordAlreadyExist value) recordAlreadyExist,
   }) {
     return permissionDenied(this);
   }
@@ -656,6 +684,7 @@ class _$_PermissionDenied implements _PermissionDenied {
     TResult Function(_WeakPassword value)? weakPassword,
     TResult Function(_OperationNotAllowed value)? operationNotAllowed,
     TResult Function(_InvalidEmail value)? invalidEmail,
+    TResult Function(_RecordAlreadyExist value)? recordAlreadyExist,
   }) {
     return permissionDenied?.call(this);
   }
@@ -675,6 +704,7 @@ class _$_PermissionDenied implements _PermissionDenied {
     TResult Function(_WeakPassword value)? weakPassword,
     TResult Function(_OperationNotAllowed value)? operationNotAllowed,
     TResult Function(_InvalidEmail value)? invalidEmail,
+    TResult Function(_RecordAlreadyExist value)? recordAlreadyExist,
     required TResult orElse(),
   }) {
     if (permissionDenied != null) {
@@ -741,6 +771,7 @@ class _$_TooManyRequests implements _TooManyRequests {
     required TResult Function() weakPassword,
     required TResult Function() operationNotAllowed,
     required TResult Function() invalidEmail,
+    required TResult Function(String message) recordAlreadyExist,
   }) {
     return tooManyRequests();
   }
@@ -760,6 +791,7 @@ class _$_TooManyRequests implements _TooManyRequests {
     TResult Function()? weakPassword,
     TResult Function()? operationNotAllowed,
     TResult Function()? invalidEmail,
+    TResult Function(String message)? recordAlreadyExist,
   }) {
     return tooManyRequests?.call();
   }
@@ -779,6 +811,7 @@ class _$_TooManyRequests implements _TooManyRequests {
     TResult Function()? weakPassword,
     TResult Function()? operationNotAllowed,
     TResult Function()? invalidEmail,
+    TResult Function(String message)? recordAlreadyExist,
     required TResult orElse(),
   }) {
     if (tooManyRequests != null) {
@@ -803,6 +836,7 @@ class _$_TooManyRequests implements _TooManyRequests {
     required TResult Function(_WeakPassword value) weakPassword,
     required TResult Function(_OperationNotAllowed value) operationNotAllowed,
     required TResult Function(_InvalidEmail value) invalidEmail,
+    required TResult Function(_RecordAlreadyExist value) recordAlreadyExist,
   }) {
     return tooManyRequests(this);
   }
@@ -822,6 +856,7 @@ class _$_TooManyRequests implements _TooManyRequests {
     TResult Function(_WeakPassword value)? weakPassword,
     TResult Function(_OperationNotAllowed value)? operationNotAllowed,
     TResult Function(_InvalidEmail value)? invalidEmail,
+    TResult Function(_RecordAlreadyExist value)? recordAlreadyExist,
   }) {
     return tooManyRequests?.call(this);
   }
@@ -841,6 +876,7 @@ class _$_TooManyRequests implements _TooManyRequests {
     TResult Function(_WeakPassword value)? weakPassword,
     TResult Function(_OperationNotAllowed value)? operationNotAllowed,
     TResult Function(_InvalidEmail value)? invalidEmail,
+    TResult Function(_RecordAlreadyExist value)? recordAlreadyExist,
     required TResult orElse(),
   }) {
     if (tooManyRequests != null) {
@@ -907,6 +943,7 @@ class _$_ServerError implements _ServerError {
     required TResult Function() weakPassword,
     required TResult Function() operationNotAllowed,
     required TResult Function() invalidEmail,
+    required TResult Function(String message) recordAlreadyExist,
   }) {
     return serverError();
   }
@@ -926,6 +963,7 @@ class _$_ServerError implements _ServerError {
     TResult Function()? weakPassword,
     TResult Function()? operationNotAllowed,
     TResult Function()? invalidEmail,
+    TResult Function(String message)? recordAlreadyExist,
   }) {
     return serverError?.call();
   }
@@ -945,6 +983,7 @@ class _$_ServerError implements _ServerError {
     TResult Function()? weakPassword,
     TResult Function()? operationNotAllowed,
     TResult Function()? invalidEmail,
+    TResult Function(String message)? recordAlreadyExist,
     required TResult orElse(),
   }) {
     if (serverError != null) {
@@ -969,6 +1008,7 @@ class _$_ServerError implements _ServerError {
     required TResult Function(_WeakPassword value) weakPassword,
     required TResult Function(_OperationNotAllowed value) operationNotAllowed,
     required TResult Function(_InvalidEmail value) invalidEmail,
+    required TResult Function(_RecordAlreadyExist value) recordAlreadyExist,
   }) {
     return serverError(this);
   }
@@ -988,6 +1028,7 @@ class _$_ServerError implements _ServerError {
     TResult Function(_WeakPassword value)? weakPassword,
     TResult Function(_OperationNotAllowed value)? operationNotAllowed,
     TResult Function(_InvalidEmail value)? invalidEmail,
+    TResult Function(_RecordAlreadyExist value)? recordAlreadyExist,
   }) {
     return serverError?.call(this);
   }
@@ -1007,6 +1048,7 @@ class _$_ServerError implements _ServerError {
     TResult Function(_WeakPassword value)? weakPassword,
     TResult Function(_OperationNotAllowed value)? operationNotAllowed,
     TResult Function(_InvalidEmail value)? invalidEmail,
+    TResult Function(_RecordAlreadyExist value)? recordAlreadyExist,
     required TResult orElse(),
   }) {
     if (serverError != null) {
@@ -1070,6 +1112,7 @@ class _$_NotFound implements _NotFound {
     required TResult Function() weakPassword,
     required TResult Function() operationNotAllowed,
     required TResult Function() invalidEmail,
+    required TResult Function(String message) recordAlreadyExist,
   }) {
     return notFound();
   }
@@ -1089,6 +1132,7 @@ class _$_NotFound implements _NotFound {
     TResult Function()? weakPassword,
     TResult Function()? operationNotAllowed,
     TResult Function()? invalidEmail,
+    TResult Function(String message)? recordAlreadyExist,
   }) {
     return notFound?.call();
   }
@@ -1108,6 +1152,7 @@ class _$_NotFound implements _NotFound {
     TResult Function()? weakPassword,
     TResult Function()? operationNotAllowed,
     TResult Function()? invalidEmail,
+    TResult Function(String message)? recordAlreadyExist,
     required TResult orElse(),
   }) {
     if (notFound != null) {
@@ -1132,6 +1177,7 @@ class _$_NotFound implements _NotFound {
     required TResult Function(_WeakPassword value) weakPassword,
     required TResult Function(_OperationNotAllowed value) operationNotAllowed,
     required TResult Function(_InvalidEmail value) invalidEmail,
+    required TResult Function(_RecordAlreadyExist value) recordAlreadyExist,
   }) {
     return notFound(this);
   }
@@ -1151,6 +1197,7 @@ class _$_NotFound implements _NotFound {
     TResult Function(_WeakPassword value)? weakPassword,
     TResult Function(_OperationNotAllowed value)? operationNotAllowed,
     TResult Function(_InvalidEmail value)? invalidEmail,
+    TResult Function(_RecordAlreadyExist value)? recordAlreadyExist,
   }) {
     return notFound?.call(this);
   }
@@ -1170,6 +1217,7 @@ class _$_NotFound implements _NotFound {
     TResult Function(_WeakPassword value)? weakPassword,
     TResult Function(_OperationNotAllowed value)? operationNotAllowed,
     TResult Function(_InvalidEmail value)? invalidEmail,
+    TResult Function(_RecordAlreadyExist value)? recordAlreadyExist,
     required TResult orElse(),
   }) {
     if (notFound != null) {
@@ -1236,6 +1284,7 @@ class _$_InvalidCredentials implements _InvalidCredentials {
     required TResult Function() weakPassword,
     required TResult Function() operationNotAllowed,
     required TResult Function() invalidEmail,
+    required TResult Function(String message) recordAlreadyExist,
   }) {
     return invalidCredentials();
   }
@@ -1255,6 +1304,7 @@ class _$_InvalidCredentials implements _InvalidCredentials {
     TResult Function()? weakPassword,
     TResult Function()? operationNotAllowed,
     TResult Function()? invalidEmail,
+    TResult Function(String message)? recordAlreadyExist,
   }) {
     return invalidCredentials?.call();
   }
@@ -1274,6 +1324,7 @@ class _$_InvalidCredentials implements _InvalidCredentials {
     TResult Function()? weakPassword,
     TResult Function()? operationNotAllowed,
     TResult Function()? invalidEmail,
+    TResult Function(String message)? recordAlreadyExist,
     required TResult orElse(),
   }) {
     if (invalidCredentials != null) {
@@ -1298,6 +1349,7 @@ class _$_InvalidCredentials implements _InvalidCredentials {
     required TResult Function(_WeakPassword value) weakPassword,
     required TResult Function(_OperationNotAllowed value) operationNotAllowed,
     required TResult Function(_InvalidEmail value) invalidEmail,
+    required TResult Function(_RecordAlreadyExist value) recordAlreadyExist,
   }) {
     return invalidCredentials(this);
   }
@@ -1317,6 +1369,7 @@ class _$_InvalidCredentials implements _InvalidCredentials {
     TResult Function(_WeakPassword value)? weakPassword,
     TResult Function(_OperationNotAllowed value)? operationNotAllowed,
     TResult Function(_InvalidEmail value)? invalidEmail,
+    TResult Function(_RecordAlreadyExist value)? recordAlreadyExist,
   }) {
     return invalidCredentials?.call(this);
   }
@@ -1336,6 +1389,7 @@ class _$_InvalidCredentials implements _InvalidCredentials {
     TResult Function(_WeakPassword value)? weakPassword,
     TResult Function(_OperationNotAllowed value)? operationNotAllowed,
     TResult Function(_InvalidEmail value)? invalidEmail,
+    TResult Function(_RecordAlreadyExist value)? recordAlreadyExist,
     required TResult orElse(),
   }) {
     if (invalidCredentials != null) {
@@ -1402,6 +1456,7 @@ class _$_EmailAlreadyInUse implements _EmailAlreadyInUse {
     required TResult Function() weakPassword,
     required TResult Function() operationNotAllowed,
     required TResult Function() invalidEmail,
+    required TResult Function(String message) recordAlreadyExist,
   }) {
     return emailAlreadyInUse();
   }
@@ -1421,6 +1476,7 @@ class _$_EmailAlreadyInUse implements _EmailAlreadyInUse {
     TResult Function()? weakPassword,
     TResult Function()? operationNotAllowed,
     TResult Function()? invalidEmail,
+    TResult Function(String message)? recordAlreadyExist,
   }) {
     return emailAlreadyInUse?.call();
   }
@@ -1440,6 +1496,7 @@ class _$_EmailAlreadyInUse implements _EmailAlreadyInUse {
     TResult Function()? weakPassword,
     TResult Function()? operationNotAllowed,
     TResult Function()? invalidEmail,
+    TResult Function(String message)? recordAlreadyExist,
     required TResult orElse(),
   }) {
     if (emailAlreadyInUse != null) {
@@ -1464,6 +1521,7 @@ class _$_EmailAlreadyInUse implements _EmailAlreadyInUse {
     required TResult Function(_WeakPassword value) weakPassword,
     required TResult Function(_OperationNotAllowed value) operationNotAllowed,
     required TResult Function(_InvalidEmail value) invalidEmail,
+    required TResult Function(_RecordAlreadyExist value) recordAlreadyExist,
   }) {
     return emailAlreadyInUse(this);
   }
@@ -1483,6 +1541,7 @@ class _$_EmailAlreadyInUse implements _EmailAlreadyInUse {
     TResult Function(_WeakPassword value)? weakPassword,
     TResult Function(_OperationNotAllowed value)? operationNotAllowed,
     TResult Function(_InvalidEmail value)? invalidEmail,
+    TResult Function(_RecordAlreadyExist value)? recordAlreadyExist,
   }) {
     return emailAlreadyInUse?.call(this);
   }
@@ -1502,6 +1561,7 @@ class _$_EmailAlreadyInUse implements _EmailAlreadyInUse {
     TResult Function(_WeakPassword value)? weakPassword,
     TResult Function(_OperationNotAllowed value)? operationNotAllowed,
     TResult Function(_InvalidEmail value)? invalidEmail,
+    TResult Function(_RecordAlreadyExist value)? recordAlreadyExist,
     required TResult orElse(),
   }) {
     if (emailAlreadyInUse != null) {
@@ -1568,6 +1628,7 @@ class _$_UserNotFound implements _UserNotFound {
     required TResult Function() weakPassword,
     required TResult Function() operationNotAllowed,
     required TResult Function() invalidEmail,
+    required TResult Function(String message) recordAlreadyExist,
   }) {
     return userNotFound();
   }
@@ -1587,6 +1648,7 @@ class _$_UserNotFound implements _UserNotFound {
     TResult Function()? weakPassword,
     TResult Function()? operationNotAllowed,
     TResult Function()? invalidEmail,
+    TResult Function(String message)? recordAlreadyExist,
   }) {
     return userNotFound?.call();
   }
@@ -1606,6 +1668,7 @@ class _$_UserNotFound implements _UserNotFound {
     TResult Function()? weakPassword,
     TResult Function()? operationNotAllowed,
     TResult Function()? invalidEmail,
+    TResult Function(String message)? recordAlreadyExist,
     required TResult orElse(),
   }) {
     if (userNotFound != null) {
@@ -1630,6 +1693,7 @@ class _$_UserNotFound implements _UserNotFound {
     required TResult Function(_WeakPassword value) weakPassword,
     required TResult Function(_OperationNotAllowed value) operationNotAllowed,
     required TResult Function(_InvalidEmail value) invalidEmail,
+    required TResult Function(_RecordAlreadyExist value) recordAlreadyExist,
   }) {
     return userNotFound(this);
   }
@@ -1649,6 +1713,7 @@ class _$_UserNotFound implements _UserNotFound {
     TResult Function(_WeakPassword value)? weakPassword,
     TResult Function(_OperationNotAllowed value)? operationNotAllowed,
     TResult Function(_InvalidEmail value)? invalidEmail,
+    TResult Function(_RecordAlreadyExist value)? recordAlreadyExist,
   }) {
     return userNotFound?.call(this);
   }
@@ -1668,6 +1733,7 @@ class _$_UserNotFound implements _UserNotFound {
     TResult Function(_WeakPassword value)? weakPassword,
     TResult Function(_OperationNotAllowed value)? operationNotAllowed,
     TResult Function(_InvalidEmail value)? invalidEmail,
+    TResult Function(_RecordAlreadyExist value)? recordAlreadyExist,
     required TResult orElse(),
   }) {
     if (userNotFound != null) {
@@ -1734,6 +1800,7 @@ class _$_WeakPassword implements _WeakPassword {
     required TResult Function() weakPassword,
     required TResult Function() operationNotAllowed,
     required TResult Function() invalidEmail,
+    required TResult Function(String message) recordAlreadyExist,
   }) {
     return weakPassword();
   }
@@ -1753,6 +1820,7 @@ class _$_WeakPassword implements _WeakPassword {
     TResult Function()? weakPassword,
     TResult Function()? operationNotAllowed,
     TResult Function()? invalidEmail,
+    TResult Function(String message)? recordAlreadyExist,
   }) {
     return weakPassword?.call();
   }
@@ -1772,6 +1840,7 @@ class _$_WeakPassword implements _WeakPassword {
     TResult Function()? weakPassword,
     TResult Function()? operationNotAllowed,
     TResult Function()? invalidEmail,
+    TResult Function(String message)? recordAlreadyExist,
     required TResult orElse(),
   }) {
     if (weakPassword != null) {
@@ -1796,6 +1865,7 @@ class _$_WeakPassword implements _WeakPassword {
     required TResult Function(_WeakPassword value) weakPassword,
     required TResult Function(_OperationNotAllowed value) operationNotAllowed,
     required TResult Function(_InvalidEmail value) invalidEmail,
+    required TResult Function(_RecordAlreadyExist value) recordAlreadyExist,
   }) {
     return weakPassword(this);
   }
@@ -1815,6 +1885,7 @@ class _$_WeakPassword implements _WeakPassword {
     TResult Function(_WeakPassword value)? weakPassword,
     TResult Function(_OperationNotAllowed value)? operationNotAllowed,
     TResult Function(_InvalidEmail value)? invalidEmail,
+    TResult Function(_RecordAlreadyExist value)? recordAlreadyExist,
   }) {
     return weakPassword?.call(this);
   }
@@ -1834,6 +1905,7 @@ class _$_WeakPassword implements _WeakPassword {
     TResult Function(_WeakPassword value)? weakPassword,
     TResult Function(_OperationNotAllowed value)? operationNotAllowed,
     TResult Function(_InvalidEmail value)? invalidEmail,
+    TResult Function(_RecordAlreadyExist value)? recordAlreadyExist,
     required TResult orElse(),
   }) {
     if (weakPassword != null) {
@@ -1900,6 +1972,7 @@ class _$_OperationNotAllowed implements _OperationNotAllowed {
     required TResult Function() weakPassword,
     required TResult Function() operationNotAllowed,
     required TResult Function() invalidEmail,
+    required TResult Function(String message) recordAlreadyExist,
   }) {
     return operationNotAllowed();
   }
@@ -1919,6 +1992,7 @@ class _$_OperationNotAllowed implements _OperationNotAllowed {
     TResult Function()? weakPassword,
     TResult Function()? operationNotAllowed,
     TResult Function()? invalidEmail,
+    TResult Function(String message)? recordAlreadyExist,
   }) {
     return operationNotAllowed?.call();
   }
@@ -1938,6 +2012,7 @@ class _$_OperationNotAllowed implements _OperationNotAllowed {
     TResult Function()? weakPassword,
     TResult Function()? operationNotAllowed,
     TResult Function()? invalidEmail,
+    TResult Function(String message)? recordAlreadyExist,
     required TResult orElse(),
   }) {
     if (operationNotAllowed != null) {
@@ -1962,6 +2037,7 @@ class _$_OperationNotAllowed implements _OperationNotAllowed {
     required TResult Function(_WeakPassword value) weakPassword,
     required TResult Function(_OperationNotAllowed value) operationNotAllowed,
     required TResult Function(_InvalidEmail value) invalidEmail,
+    required TResult Function(_RecordAlreadyExist value) recordAlreadyExist,
   }) {
     return operationNotAllowed(this);
   }
@@ -1981,6 +2057,7 @@ class _$_OperationNotAllowed implements _OperationNotAllowed {
     TResult Function(_WeakPassword value)? weakPassword,
     TResult Function(_OperationNotAllowed value)? operationNotAllowed,
     TResult Function(_InvalidEmail value)? invalidEmail,
+    TResult Function(_RecordAlreadyExist value)? recordAlreadyExist,
   }) {
     return operationNotAllowed?.call(this);
   }
@@ -2000,6 +2077,7 @@ class _$_OperationNotAllowed implements _OperationNotAllowed {
     TResult Function(_WeakPassword value)? weakPassword,
     TResult Function(_OperationNotAllowed value)? operationNotAllowed,
     TResult Function(_InvalidEmail value)? invalidEmail,
+    TResult Function(_RecordAlreadyExist value)? recordAlreadyExist,
     required TResult orElse(),
   }) {
     if (operationNotAllowed != null) {
@@ -2066,6 +2144,7 @@ class _$_InvalidEmail implements _InvalidEmail {
     required TResult Function() weakPassword,
     required TResult Function() operationNotAllowed,
     required TResult Function() invalidEmail,
+    required TResult Function(String message) recordAlreadyExist,
   }) {
     return invalidEmail();
   }
@@ -2085,6 +2164,7 @@ class _$_InvalidEmail implements _InvalidEmail {
     TResult Function()? weakPassword,
     TResult Function()? operationNotAllowed,
     TResult Function()? invalidEmail,
+    TResult Function(String message)? recordAlreadyExist,
   }) {
     return invalidEmail?.call();
   }
@@ -2104,6 +2184,7 @@ class _$_InvalidEmail implements _InvalidEmail {
     TResult Function()? weakPassword,
     TResult Function()? operationNotAllowed,
     TResult Function()? invalidEmail,
+    TResult Function(String message)? recordAlreadyExist,
     required TResult orElse(),
   }) {
     if (invalidEmail != null) {
@@ -2128,6 +2209,7 @@ class _$_InvalidEmail implements _InvalidEmail {
     required TResult Function(_WeakPassword value) weakPassword,
     required TResult Function(_OperationNotAllowed value) operationNotAllowed,
     required TResult Function(_InvalidEmail value) invalidEmail,
+    required TResult Function(_RecordAlreadyExist value) recordAlreadyExist,
   }) {
     return invalidEmail(this);
   }
@@ -2147,6 +2229,7 @@ class _$_InvalidEmail implements _InvalidEmail {
     TResult Function(_WeakPassword value)? weakPassword,
     TResult Function(_OperationNotAllowed value)? operationNotAllowed,
     TResult Function(_InvalidEmail value)? invalidEmail,
+    TResult Function(_RecordAlreadyExist value)? recordAlreadyExist,
   }) {
     return invalidEmail?.call(this);
   }
@@ -2166,6 +2249,7 @@ class _$_InvalidEmail implements _InvalidEmail {
     TResult Function(_WeakPassword value)? weakPassword,
     TResult Function(_OperationNotAllowed value)? operationNotAllowed,
     TResult Function(_InvalidEmail value)? invalidEmail,
+    TResult Function(_RecordAlreadyExist value)? recordAlreadyExist,
     required TResult orElse(),
   }) {
     if (invalidEmail != null) {
@@ -2177,4 +2261,206 @@ class _$_InvalidEmail implements _InvalidEmail {
 
 abstract class _InvalidEmail implements FirestoreFailure {
   const factory _InvalidEmail() = _$_InvalidEmail;
+}
+
+/// @nodoc
+abstract class _$RecordAlreadyExistCopyWith<$Res> {
+  factory _$RecordAlreadyExistCopyWith(
+          _RecordAlreadyExist value, $Res Function(_RecordAlreadyExist) then) =
+      __$RecordAlreadyExistCopyWithImpl<$Res>;
+  $Res call({String message});
+}
+
+/// @nodoc
+class __$RecordAlreadyExistCopyWithImpl<$Res>
+    extends _$FirestoreFailureCopyWithImpl<$Res>
+    implements _$RecordAlreadyExistCopyWith<$Res> {
+  __$RecordAlreadyExistCopyWithImpl(
+      _RecordAlreadyExist _value, $Res Function(_RecordAlreadyExist) _then)
+      : super(_value, (v) => _then(v as _RecordAlreadyExist));
+
+  @override
+  _RecordAlreadyExist get _value => super._value as _RecordAlreadyExist;
+
+  @override
+  $Res call({
+    Object? message = freezed,
+  }) {
+    return _then(_RecordAlreadyExist(
+      message: message == freezed
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$_RecordAlreadyExist implements _RecordAlreadyExist {
+  const _$_RecordAlreadyExist({required this.message});
+
+  @override
+  final String message;
+
+  @override
+  String toString() {
+    return 'FirestoreFailure.recordAlreadyExist(message: $message)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _RecordAlreadyExist &&
+            const DeepCollectionEquality().equals(other.message, message));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(message));
+
+  @JsonKey(ignore: true)
+  @override
+  _$RecordAlreadyExistCopyWith<_RecordAlreadyExist> get copyWith =>
+      __$RecordAlreadyExistCopyWithImpl<_RecordAlreadyExist>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() unexpected,
+    required TResult Function() insufficientPermission,
+    required TResult Function() permissionDenied,
+    required TResult Function() tooManyRequests,
+    required TResult Function() serverError,
+    required TResult Function() notFound,
+    required TResult Function() invalidCredentials,
+    required TResult Function() emailAlreadyInUse,
+    required TResult Function() userNotFound,
+    required TResult Function() weakPassword,
+    required TResult Function() operationNotAllowed,
+    required TResult Function() invalidEmail,
+    required TResult Function(String message) recordAlreadyExist,
+  }) {
+    return recordAlreadyExist(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? unexpected,
+    TResult Function()? insufficientPermission,
+    TResult Function()? permissionDenied,
+    TResult Function()? tooManyRequests,
+    TResult Function()? serverError,
+    TResult Function()? notFound,
+    TResult Function()? invalidCredentials,
+    TResult Function()? emailAlreadyInUse,
+    TResult Function()? userNotFound,
+    TResult Function()? weakPassword,
+    TResult Function()? operationNotAllowed,
+    TResult Function()? invalidEmail,
+    TResult Function(String message)? recordAlreadyExist,
+  }) {
+    return recordAlreadyExist?.call(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? unexpected,
+    TResult Function()? insufficientPermission,
+    TResult Function()? permissionDenied,
+    TResult Function()? tooManyRequests,
+    TResult Function()? serverError,
+    TResult Function()? notFound,
+    TResult Function()? invalidCredentials,
+    TResult Function()? emailAlreadyInUse,
+    TResult Function()? userNotFound,
+    TResult Function()? weakPassword,
+    TResult Function()? operationNotAllowed,
+    TResult Function()? invalidEmail,
+    TResult Function(String message)? recordAlreadyExist,
+    required TResult orElse(),
+  }) {
+    if (recordAlreadyExist != null) {
+      return recordAlreadyExist(message);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Unexpected value) unexpected,
+    required TResult Function(_InsufficientPermission value)
+        insufficientPermission,
+    required TResult Function(_PermissionDenied value) permissionDenied,
+    required TResult Function(_TooManyRequests value) tooManyRequests,
+    required TResult Function(_ServerError value) serverError,
+    required TResult Function(_NotFound value) notFound,
+    required TResult Function(_InvalidCredentials value) invalidCredentials,
+    required TResult Function(_EmailAlreadyInUse value) emailAlreadyInUse,
+    required TResult Function(_UserNotFound value) userNotFound,
+    required TResult Function(_WeakPassword value) weakPassword,
+    required TResult Function(_OperationNotAllowed value) operationNotAllowed,
+    required TResult Function(_InvalidEmail value) invalidEmail,
+    required TResult Function(_RecordAlreadyExist value) recordAlreadyExist,
+  }) {
+    return recordAlreadyExist(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_Unexpected value)? unexpected,
+    TResult Function(_InsufficientPermission value)? insufficientPermission,
+    TResult Function(_PermissionDenied value)? permissionDenied,
+    TResult Function(_TooManyRequests value)? tooManyRequests,
+    TResult Function(_ServerError value)? serverError,
+    TResult Function(_NotFound value)? notFound,
+    TResult Function(_InvalidCredentials value)? invalidCredentials,
+    TResult Function(_EmailAlreadyInUse value)? emailAlreadyInUse,
+    TResult Function(_UserNotFound value)? userNotFound,
+    TResult Function(_WeakPassword value)? weakPassword,
+    TResult Function(_OperationNotAllowed value)? operationNotAllowed,
+    TResult Function(_InvalidEmail value)? invalidEmail,
+    TResult Function(_RecordAlreadyExist value)? recordAlreadyExist,
+  }) {
+    return recordAlreadyExist?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Unexpected value)? unexpected,
+    TResult Function(_InsufficientPermission value)? insufficientPermission,
+    TResult Function(_PermissionDenied value)? permissionDenied,
+    TResult Function(_TooManyRequests value)? tooManyRequests,
+    TResult Function(_ServerError value)? serverError,
+    TResult Function(_NotFound value)? notFound,
+    TResult Function(_InvalidCredentials value)? invalidCredentials,
+    TResult Function(_EmailAlreadyInUse value)? emailAlreadyInUse,
+    TResult Function(_UserNotFound value)? userNotFound,
+    TResult Function(_WeakPassword value)? weakPassword,
+    TResult Function(_OperationNotAllowed value)? operationNotAllowed,
+    TResult Function(_InvalidEmail value)? invalidEmail,
+    TResult Function(_RecordAlreadyExist value)? recordAlreadyExist,
+    required TResult orElse(),
+  }) {
+    if (recordAlreadyExist != null) {
+      return recordAlreadyExist(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _RecordAlreadyExist implements FirestoreFailure {
+  const factory _RecordAlreadyExist({required String message}) =
+      _$_RecordAlreadyExist;
+
+  String get message;
+  @JsonKey(ignore: true)
+  _$RecordAlreadyExistCopyWith<_RecordAlreadyExist> get copyWith =>
+      throw _privateConstructorUsedError;
 }

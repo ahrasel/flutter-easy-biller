@@ -15,4 +15,6 @@ abstract class FirestoreFailure with _$FirestoreFailure {
   const factory FirestoreFailure.weakPassword() = _WeakPassword;
   const factory FirestoreFailure.operationNotAllowed() = _OperationNotAllowed;
   const factory FirestoreFailure.invalidEmail() = _InvalidEmail;
+  const factory FirestoreFailure.recordAlreadyExist({required String message}) =
+      _RecordAlreadyExist;
 }
