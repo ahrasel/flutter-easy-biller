@@ -39,4 +39,10 @@ class LoginController extends BaseController {
       }
     }
   }
+
+  void email(String value) {}
+
+  void password(String value) {}
+
+  validateEmail(value) {}
 }
