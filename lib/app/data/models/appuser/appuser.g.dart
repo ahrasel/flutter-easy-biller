@@ -8,10 +8,10 @@ part of 'appuser.dart';
 
 _$_AppUser _$$_AppUserFromJson(Map<String, dynamic> json) => _$_AppUser(
       id: json['id'] as String,
-      firstName: json['firstName'] as String?,
-      lastName: json['lastName'] as String?,
-      email: json['email'] as String?,
-      phoneNumber: json['phoneNumber'] as String?,
+      firstName: json['firstName'] as String,
+      lastName: json['lastName'] as String,
+      email: json['email'] as String,
+      phoneNumber: json['phoneNumber'] as String,
       photoUrl: json['photoUrl'] as String?,
       gender: json['gender'] as String?,
       address: json['address'] as String?,

@@ -14,4 +14,5 @@ abstract class FirestoreFailure with _$FirestoreFailure {
   const factory FirestoreFailure.userNotFound() = _UserNotFound;
   const factory FirestoreFailure.weakPassword() = _WeakPassword;
   const factory FirestoreFailure.operationNotAllowed() = _OperationNotAllowed;
+  const factory FirestoreFailure.invalidEmail() = _InvalidEmail;
 }

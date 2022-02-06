@@ -24,10 +24,10 @@ class _$AppUserTearOff {
 
   _AppUser call(
       {required String id,
-      String? firstName,
-      String? lastName,
-      String? email,
-      String? phoneNumber,
+      required String firstName,
+      required String lastName,
+      required String email,
+      required String phoneNumber,
       String? photoUrl,
       String? gender,
       String? address,
@@ -64,10 +64,10 @@ const $AppUser = _$AppUserTearOff();
 /// @nodoc
 mixin _$AppUser {
   String get id => throw _privateConstructorUsedError;
-  String? get firstName => throw _privateConstructorUsedError;
-  String? get lastName => throw _privateConstructorUsedError;
-  String? get email => throw _privateConstructorUsedError;
-  String? get phoneNumber => throw _privateConstructorUsedError;
+  String get firstName => throw _privateConstructorUsedError;
+  String get lastName => throw _privateConstructorUsedError;
+  String get email => throw _privateConstructorUsedError;
+  String get phoneNumber => throw _privateConstructorUsedError;
   String? get photoUrl => throw _privateConstructorUsedError;
   String? get gender => throw _privateConstructorUsedError;
   String? get address => throw _privateConstructorUsedError;
@@ -88,10 +88,10 @@ abstract class $AppUserCopyWith<$Res> {
       _$AppUserCopyWithImpl<$Res>;
   $Res call(
       {String id,
-      String? firstName,
-      String? lastName,
-      String? email,
-      String? phoneNumber,
+      String firstName,
+      String lastName,
+      String email,
+      String phoneNumber,
       String? photoUrl,
       String? gender,
       String? address,
@@ -134,19 +134,19 @@ class _$AppUserCopyWithImpl<$Res> implements $AppUserCopyWith<$Res> {
       firstName: firstName == freezed
           ? _value.firstName
           : firstName // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       lastName: lastName == freezed
           ? _value.lastName
           : lastName // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       email: email == freezed
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       phoneNumber: phoneNumber == freezed
           ? _value.phoneNumber
           : phoneNumber // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       photoUrl: photoUrl == freezed
           ? _value.photoUrl
           : photoUrl // ignore: cast_nullable_to_non_nullable
@@ -190,10 +190,10 @@ abstract class _$AppUserCopyWith<$Res> implements $AppUserCopyWith<$Res> {
   @override
   $Res call(
       {String id,
-      String? firstName,
-      String? lastName,
-      String? email,
-      String? phoneNumber,
+      String firstName,
+      String lastName,
+      String email,
+      String phoneNumber,
       String? photoUrl,
       String? gender,
       String? address,
@@ -237,19 +237,19 @@ class __$AppUserCopyWithImpl<$Res> extends _$AppUserCopyWithImpl<$Res>
       firstName: firstName == freezed
           ? _value.firstName
           : firstName // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       lastName: lastName == freezed
           ? _value.lastName
           : lastName // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       email: email == freezed
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       phoneNumber: phoneNumber == freezed
           ? _value.phoneNumber
           : phoneNumber // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       photoUrl: photoUrl == freezed
           ? _value.photoUrl
           : photoUrl // ignore: cast_nullable_to_non_nullable
@@ -291,10 +291,10 @@ class __$AppUserCopyWithImpl<$Res> extends _$AppUserCopyWithImpl<$Res>
 class _$_AppUser extends _AppUser {
   const _$_AppUser(
       {required this.id,
-      this.firstName,
-      this.lastName,
-      this.email,
-      this.phoneNumber,
+      required this.firstName,
+      required this.lastName,
+      required this.email,
+      required this.phoneNumber,
       this.photoUrl,
       this.gender,
       this.address,
@@ -311,13 +311,13 @@ class _$_AppUser extends _AppUser {
   @override
   final String id;
   @override
-  final String? firstName;
+  final String firstName;
   @override
-  final String? lastName;
+  final String lastName;
   @override
-  final String? email;
+  final String email;
   @override
-  final String? phoneNumber;
+  final String phoneNumber;
   @override
   final String? photoUrl;
   @override
@@ -394,10 +394,10 @@ class _$_AppUser extends _AppUser {
 abstract class _AppUser extends AppUser {
   const factory _AppUser(
       {required String id,
-      String? firstName,
-      String? lastName,
-      String? email,
-      String? phoneNumber,
+      required String firstName,
+      required String lastName,
+      required String email,
+      required String phoneNumber,
       String? photoUrl,
       String? gender,
       String? address,
@@ -413,13 +413,13 @@ abstract class _AppUser extends AppUser {
   @override
   String get id;
   @override
-  String? get firstName;
+  String get firstName;
   @override
-  String? get lastName;
+  String get lastName;
   @override
-  String? get email;
+  String get email;
   @override
-  String? get phoneNumber;
+  String get phoneNumber;
   @override
   String? get photoUrl;
   @override

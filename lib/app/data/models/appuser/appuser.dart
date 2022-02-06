@@ -12,10 +12,10 @@ abstract class AppUser implements _$AppUser {
 
   const factory AppUser({
     required String id,
-    String? firstName,
-    String? lastName,
-    String? email,
-    String? phoneNumber,
+    required String firstName,
+    required String lastName,
+    required String email,
+    required String phoneNumber,
     String? photoUrl,
     String? gender,
     String? address,
@@ -28,7 +28,8 @@ abstract class AppUser implements _$AppUser {
 
   factory AppUser.fromJson(Map<String, dynamic> json) => _$AppUserFromJson(json);
 
-  factory AppUser.empty() => const AppUser(id: '');
+  factory AppUser.empty() =>
+      const AppUser(id: '', email: '', firstName: '', lastName: '', phoneNumber: '');
 
   factory AppUser.fromDocument(DocumentSnapshot doc) =>
       AppUser.fromJson(ModelHelpers().fromDocument(doc.data()!)).copyWith(id: doc.id);

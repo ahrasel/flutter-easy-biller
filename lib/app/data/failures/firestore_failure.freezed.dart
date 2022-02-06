@@ -61,6 +61,10 @@ class _$FirestoreFailureTearOff {
   _OperationNotAllowed operationNotAllowed() {
     return const _OperationNotAllowed();
   }
+
+  _InvalidEmail invalidEmail() {
+    return const _InvalidEmail();
+  }
 }
 
 /// @nodoc
@@ -81,6 +85,7 @@ mixin _$FirestoreFailure {
     required TResult Function() userNotFound,
     required TResult Function() weakPassword,
     required TResult Function() operationNotAllowed,
+    required TResult Function() invalidEmail,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -96,6 +101,7 @@ mixin _$FirestoreFailure {
     TResult Function()? userNotFound,
     TResult Function()? weakPassword,
     TResult Function()? operationNotAllowed,
+    TResult Function()? invalidEmail,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -111,6 +117,7 @@ mixin _$FirestoreFailure {
     TResult Function()? userNotFound,
     TResult Function()? weakPassword,
     TResult Function()? operationNotAllowed,
+    TResult Function()? invalidEmail,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -128,6 +135,7 @@ mixin _$FirestoreFailure {
     required TResult Function(_UserNotFound value) userNotFound,
     required TResult Function(_WeakPassword value) weakPassword,
     required TResult Function(_OperationNotAllowed value) operationNotAllowed,
+    required TResult Function(_InvalidEmail value) invalidEmail,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -143,6 +151,7 @@ mixin _$FirestoreFailure {
     TResult Function(_UserNotFound value)? userNotFound,
     TResult Function(_WeakPassword value)? weakPassword,
     TResult Function(_OperationNotAllowed value)? operationNotAllowed,
+    TResult Function(_InvalidEmail value)? invalidEmail,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -158,6 +167,7 @@ mixin _$FirestoreFailure {
     TResult Function(_UserNotFound value)? userNotFound,
     TResult Function(_WeakPassword value)? weakPassword,
     TResult Function(_OperationNotAllowed value)? operationNotAllowed,
+    TResult Function(_InvalidEmail value)? invalidEmail,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -232,6 +242,7 @@ class _$_Unexpected implements _Unexpected {
     required TResult Function() userNotFound,
     required TResult Function() weakPassword,
     required TResult Function() operationNotAllowed,
+    required TResult Function() invalidEmail,
   }) {
     return unexpected();
   }
@@ -250,6 +261,7 @@ class _$_Unexpected implements _Unexpected {
     TResult Function()? userNotFound,
     TResult Function()? weakPassword,
     TResult Function()? operationNotAllowed,
+    TResult Function()? invalidEmail,
   }) {
     return unexpected?.call();
   }
@@ -268,6 +280,7 @@ class _$_Unexpected implements _Unexpected {
     TResult Function()? userNotFound,
     TResult Function()? weakPassword,
     TResult Function()? operationNotAllowed,
+    TResult Function()? invalidEmail,
     required TResult orElse(),
   }) {
     if (unexpected != null) {
@@ -291,6 +304,7 @@ class _$_Unexpected implements _Unexpected {
     required TResult Function(_UserNotFound value) userNotFound,
     required TResult Function(_WeakPassword value) weakPassword,
     required TResult Function(_OperationNotAllowed value) operationNotAllowed,
+    required TResult Function(_InvalidEmail value) invalidEmail,
   }) {
     return unexpected(this);
   }
@@ -309,6 +323,7 @@ class _$_Unexpected implements _Unexpected {
     TResult Function(_UserNotFound value)? userNotFound,
     TResult Function(_WeakPassword value)? weakPassword,
     TResult Function(_OperationNotAllowed value)? operationNotAllowed,
+    TResult Function(_InvalidEmail value)? invalidEmail,
   }) {
     return unexpected?.call(this);
   }
@@ -327,6 +342,7 @@ class _$_Unexpected implements _Unexpected {
     TResult Function(_UserNotFound value)? userNotFound,
     TResult Function(_WeakPassword value)? weakPassword,
     TResult Function(_OperationNotAllowed value)? operationNotAllowed,
+    TResult Function(_InvalidEmail value)? invalidEmail,
     required TResult orElse(),
   }) {
     if (unexpected != null) {
@@ -392,6 +408,7 @@ class _$_InsufficientPermission implements _InsufficientPermission {
     required TResult Function() userNotFound,
     required TResult Function() weakPassword,
     required TResult Function() operationNotAllowed,
+    required TResult Function() invalidEmail,
   }) {
     return insufficientPermission();
   }
@@ -410,6 +427,7 @@ class _$_InsufficientPermission implements _InsufficientPermission {
     TResult Function()? userNotFound,
     TResult Function()? weakPassword,
     TResult Function()? operationNotAllowed,
+    TResult Function()? invalidEmail,
   }) {
     return insufficientPermission?.call();
   }
@@ -428,6 +446,7 @@ class _$_InsufficientPermission implements _InsufficientPermission {
     TResult Function()? userNotFound,
     TResult Function()? weakPassword,
     TResult Function()? operationNotAllowed,
+    TResult Function()? invalidEmail,
     required TResult orElse(),
   }) {
     if (insufficientPermission != null) {
@@ -451,6 +470,7 @@ class _$_InsufficientPermission implements _InsufficientPermission {
     required TResult Function(_UserNotFound value) userNotFound,
     required TResult Function(_WeakPassword value) weakPassword,
     required TResult Function(_OperationNotAllowed value) operationNotAllowed,
+    required TResult Function(_InvalidEmail value) invalidEmail,
   }) {
     return insufficientPermission(this);
   }
@@ -469,6 +489,7 @@ class _$_InsufficientPermission implements _InsufficientPermission {
     TResult Function(_UserNotFound value)? userNotFound,
     TResult Function(_WeakPassword value)? weakPassword,
     TResult Function(_OperationNotAllowed value)? operationNotAllowed,
+    TResult Function(_InvalidEmail value)? invalidEmail,
   }) {
     return insufficientPermission?.call(this);
   }
@@ -487,6 +508,7 @@ class _$_InsufficientPermission implements _InsufficientPermission {
     TResult Function(_UserNotFound value)? userNotFound,
     TResult Function(_WeakPassword value)? weakPassword,
     TResult Function(_OperationNotAllowed value)? operationNotAllowed,
+    TResult Function(_InvalidEmail value)? invalidEmail,
     required TResult orElse(),
   }) {
     if (insufficientPermission != null) {
@@ -552,6 +574,7 @@ class _$_PermissionDenied implements _PermissionDenied {
     required TResult Function() userNotFound,
     required TResult Function() weakPassword,
     required TResult Function() operationNotAllowed,
+    required TResult Function() invalidEmail,
   }) {
     return permissionDenied();
   }
@@ -570,6 +593,7 @@ class _$_PermissionDenied implements _PermissionDenied {
     TResult Function()? userNotFound,
     TResult Function()? weakPassword,
     TResult Function()? operationNotAllowed,
+    TResult Function()? invalidEmail,
   }) {
     return permissionDenied?.call();
   }
@@ -588,6 +612,7 @@ class _$_PermissionDenied implements _PermissionDenied {
     TResult Function()? userNotFound,
     TResult Function()? weakPassword,
     TResult Function()? operationNotAllowed,
+    TResult Function()? invalidEmail,
     required TResult orElse(),
   }) {
     if (permissionDenied != null) {
@@ -611,6 +636,7 @@ class _$_PermissionDenied implements _PermissionDenied {
     required TResult Function(_UserNotFound value) userNotFound,
     required TResult Function(_WeakPassword value) weakPassword,
     required TResult Function(_OperationNotAllowed value) operationNotAllowed,
+    required TResult Function(_InvalidEmail value) invalidEmail,
   }) {
     return permissionDenied(this);
   }
@@ -629,6 +655,7 @@ class _$_PermissionDenied implements _PermissionDenied {
     TResult Function(_UserNotFound value)? userNotFound,
     TResult Function(_WeakPassword value)? weakPassword,
     TResult Function(_OperationNotAllowed value)? operationNotAllowed,
+    TResult Function(_InvalidEmail value)? invalidEmail,
   }) {
     return permissionDenied?.call(this);
   }
@@ -647,6 +674,7 @@ class _$_PermissionDenied implements _PermissionDenied {
     TResult Function(_UserNotFound value)? userNotFound,
     TResult Function(_WeakPassword value)? weakPassword,
     TResult Function(_OperationNotAllowed value)? operationNotAllowed,
+    TResult Function(_InvalidEmail value)? invalidEmail,
     required TResult orElse(),
   }) {
     if (permissionDenied != null) {
@@ -712,6 +740,7 @@ class _$_TooManyRequests implements _TooManyRequests {
     required TResult Function() userNotFound,
     required TResult Function() weakPassword,
     required TResult Function() operationNotAllowed,
+    required TResult Function() invalidEmail,
   }) {
     return tooManyRequests();
   }
@@ -730,6 +759,7 @@ class _$_TooManyRequests implements _TooManyRequests {
     TResult Function()? userNotFound,
     TResult Function()? weakPassword,
     TResult Function()? operationNotAllowed,
+    TResult Function()? invalidEmail,
   }) {
     return tooManyRequests?.call();
   }
@@ -748,6 +778,7 @@ class _$_TooManyRequests implements _TooManyRequests {
     TResult Function()? userNotFound,
     TResult Function()? weakPassword,
     TResult Function()? operationNotAllowed,
+    TResult Function()? invalidEmail,
     required TResult orElse(),
   }) {
     if (tooManyRequests != null) {
@@ -771,6 +802,7 @@ class _$_TooManyRequests implements _TooManyRequests {
     required TResult Function(_UserNotFound value) userNotFound,
     required TResult Function(_WeakPassword value) weakPassword,
     required TResult Function(_OperationNotAllowed value) operationNotAllowed,
+    required TResult Function(_InvalidEmail value) invalidEmail,
   }) {
     return tooManyRequests(this);
   }
@@ -789,6 +821,7 @@ class _$_TooManyRequests implements _TooManyRequests {
     TResult Function(_UserNotFound value)? userNotFound,
     TResult Function(_WeakPassword value)? weakPassword,
     TResult Function(_OperationNotAllowed value)? operationNotAllowed,
+    TResult Function(_InvalidEmail value)? invalidEmail,
   }) {
     return tooManyRequests?.call(this);
   }
@@ -807,6 +840,7 @@ class _$_TooManyRequests implements _TooManyRequests {
     TResult Function(_UserNotFound value)? userNotFound,
     TResult Function(_WeakPassword value)? weakPassword,
     TResult Function(_OperationNotAllowed value)? operationNotAllowed,
+    TResult Function(_InvalidEmail value)? invalidEmail,
     required TResult orElse(),
   }) {
     if (tooManyRequests != null) {
@@ -872,6 +906,7 @@ class _$_ServerError implements _ServerError {
     required TResult Function() userNotFound,
     required TResult Function() weakPassword,
     required TResult Function() operationNotAllowed,
+    required TResult Function() invalidEmail,
   }) {
     return serverError();
   }
@@ -890,6 +925,7 @@ class _$_ServerError implements _ServerError {
     TResult Function()? userNotFound,
     TResult Function()? weakPassword,
     TResult Function()? operationNotAllowed,
+    TResult Function()? invalidEmail,
   }) {
     return serverError?.call();
   }
@@ -908,6 +944,7 @@ class _$_ServerError implements _ServerError {
     TResult Function()? userNotFound,
     TResult Function()? weakPassword,
     TResult Function()? operationNotAllowed,
+    TResult Function()? invalidEmail,
     required TResult orElse(),
   }) {
     if (serverError != null) {
@@ -931,6 +968,7 @@ class _$_ServerError implements _ServerError {
     required TResult Function(_UserNotFound value) userNotFound,
     required TResult Function(_WeakPassword value) weakPassword,
     required TResult Function(_OperationNotAllowed value) operationNotAllowed,
+    required TResult Function(_InvalidEmail value) invalidEmail,
   }) {
     return serverError(this);
   }
@@ -949,6 +987,7 @@ class _$_ServerError implements _ServerError {
     TResult Function(_UserNotFound value)? userNotFound,
     TResult Function(_WeakPassword value)? weakPassword,
     TResult Function(_OperationNotAllowed value)? operationNotAllowed,
+    TResult Function(_InvalidEmail value)? invalidEmail,
   }) {
     return serverError?.call(this);
   }
@@ -967,6 +1006,7 @@ class _$_ServerError implements _ServerError {
     TResult Function(_UserNotFound value)? userNotFound,
     TResult Function(_WeakPassword value)? weakPassword,
     TResult Function(_OperationNotAllowed value)? operationNotAllowed,
+    TResult Function(_InvalidEmail value)? invalidEmail,
     required TResult orElse(),
   }) {
     if (serverError != null) {
@@ -1029,6 +1069,7 @@ class _$_NotFound implements _NotFound {
     required TResult Function() userNotFound,
     required TResult Function() weakPassword,
     required TResult Function() operationNotAllowed,
+    required TResult Function() invalidEmail,
   }) {
     return notFound();
   }
@@ -1047,6 +1088,7 @@ class _$_NotFound implements _NotFound {
     TResult Function()? userNotFound,
     TResult Function()? weakPassword,
     TResult Function()? operationNotAllowed,
+    TResult Function()? invalidEmail,
   }) {
     return notFound?.call();
   }
@@ -1065,6 +1107,7 @@ class _$_NotFound implements _NotFound {
     TResult Function()? userNotFound,
     TResult Function()? weakPassword,
     TResult Function()? operationNotAllowed,
+    TResult Function()? invalidEmail,
     required TResult orElse(),
   }) {
     if (notFound != null) {
@@ -1088,6 +1131,7 @@ class _$_NotFound implements _NotFound {
     required TResult Function(_UserNotFound value) userNotFound,
     required TResult Function(_WeakPassword value) weakPassword,
     required TResult Function(_OperationNotAllowed value) operationNotAllowed,
+    required TResult Function(_InvalidEmail value) invalidEmail,
   }) {
     return notFound(this);
   }
@@ -1106,6 +1150,7 @@ class _$_NotFound implements _NotFound {
     TResult Function(_UserNotFound value)? userNotFound,
     TResult Function(_WeakPassword value)? weakPassword,
     TResult Function(_OperationNotAllowed value)? operationNotAllowed,
+    TResult Function(_InvalidEmail value)? invalidEmail,
   }) {
     return notFound?.call(this);
   }
@@ -1124,6 +1169,7 @@ class _$_NotFound implements _NotFound {
     TResult Function(_UserNotFound value)? userNotFound,
     TResult Function(_WeakPassword value)? weakPassword,
     TResult Function(_OperationNotAllowed value)? operationNotAllowed,
+    TResult Function(_InvalidEmail value)? invalidEmail,
     required TResult orElse(),
   }) {
     if (notFound != null) {
@@ -1189,6 +1235,7 @@ class _$_InvalidCredentials implements _InvalidCredentials {
     required TResult Function() userNotFound,
     required TResult Function() weakPassword,
     required TResult Function() operationNotAllowed,
+    required TResult Function() invalidEmail,
   }) {
     return invalidCredentials();
   }
@@ -1207,6 +1254,7 @@ class _$_InvalidCredentials implements _InvalidCredentials {
     TResult Function()? userNotFound,
     TResult Function()? weakPassword,
     TResult Function()? operationNotAllowed,
+    TResult Function()? invalidEmail,
   }) {
     return invalidCredentials?.call();
   }
@@ -1225,6 +1273,7 @@ class _$_InvalidCredentials implements _InvalidCredentials {
     TResult Function()? userNotFound,
     TResult Function()? weakPassword,
     TResult Function()? operationNotAllowed,
+    TResult Function()? invalidEmail,
     required TResult orElse(),
   }) {
     if (invalidCredentials != null) {
@@ -1248,6 +1297,7 @@ class _$_InvalidCredentials implements _InvalidCredentials {
     required TResult Function(_UserNotFound value) userNotFound,
     required TResult Function(_WeakPassword value) weakPassword,
     required TResult Function(_OperationNotAllowed value) operationNotAllowed,
+    required TResult Function(_InvalidEmail value) invalidEmail,
   }) {
     return invalidCredentials(this);
   }
@@ -1266,6 +1316,7 @@ class _$_InvalidCredentials implements _InvalidCredentials {
     TResult Function(_UserNotFound value)? userNotFound,
     TResult Function(_WeakPassword value)? weakPassword,
     TResult Function(_OperationNotAllowed value)? operationNotAllowed,
+    TResult Function(_InvalidEmail value)? invalidEmail,
   }) {
     return invalidCredentials?.call(this);
   }
@@ -1284,6 +1335,7 @@ class _$_InvalidCredentials implements _InvalidCredentials {
     TResult Function(_UserNotFound value)? userNotFound,
     TResult Function(_WeakPassword value)? weakPassword,
     TResult Function(_OperationNotAllowed value)? operationNotAllowed,
+    TResult Function(_InvalidEmail value)? invalidEmail,
     required TResult orElse(),
   }) {
     if (invalidCredentials != null) {
@@ -1349,6 +1401,7 @@ class _$_EmailAlreadyInUse implements _EmailAlreadyInUse {
     required TResult Function() userNotFound,
     required TResult Function() weakPassword,
     required TResult Function() operationNotAllowed,
+    required TResult Function() invalidEmail,
   }) {
     return emailAlreadyInUse();
   }
@@ -1367,6 +1420,7 @@ class _$_EmailAlreadyInUse implements _EmailAlreadyInUse {
     TResult Function()? userNotFound,
     TResult Function()? weakPassword,
     TResult Function()? operationNotAllowed,
+    TResult Function()? invalidEmail,
   }) {
     return emailAlreadyInUse?.call();
   }
@@ -1385,6 +1439,7 @@ class _$_EmailAlreadyInUse implements _EmailAlreadyInUse {
     TResult Function()? userNotFound,
     TResult Function()? weakPassword,
     TResult Function()? operationNotAllowed,
+    TResult Function()? invalidEmail,
     required TResult orElse(),
   }) {
     if (emailAlreadyInUse != null) {
@@ -1408,6 +1463,7 @@ class _$_EmailAlreadyInUse implements _EmailAlreadyInUse {
     required TResult Function(_UserNotFound value) userNotFound,
     required TResult Function(_WeakPassword value) weakPassword,
     required TResult Function(_OperationNotAllowed value) operationNotAllowed,
+    required TResult Function(_InvalidEmail value) invalidEmail,
   }) {
     return emailAlreadyInUse(this);
   }
@@ -1426,6 +1482,7 @@ class _$_EmailAlreadyInUse implements _EmailAlreadyInUse {
     TResult Function(_UserNotFound value)? userNotFound,
     TResult Function(_WeakPassword value)? weakPassword,
     TResult Function(_OperationNotAllowed value)? operationNotAllowed,
+    TResult Function(_InvalidEmail value)? invalidEmail,
   }) {
     return emailAlreadyInUse?.call(this);
   }
@@ -1444,6 +1501,7 @@ class _$_EmailAlreadyInUse implements _EmailAlreadyInUse {
     TResult Function(_UserNotFound value)? userNotFound,
     TResult Function(_WeakPassword value)? weakPassword,
     TResult Function(_OperationNotAllowed value)? operationNotAllowed,
+    TResult Function(_InvalidEmail value)? invalidEmail,
     required TResult orElse(),
   }) {
     if (emailAlreadyInUse != null) {
@@ -1509,6 +1567,7 @@ class _$_UserNotFound implements _UserNotFound {
     required TResult Function() userNotFound,
     required TResult Function() weakPassword,
     required TResult Function() operationNotAllowed,
+    required TResult Function() invalidEmail,
   }) {
     return userNotFound();
   }
@@ -1527,6 +1586,7 @@ class _$_UserNotFound implements _UserNotFound {
     TResult Function()? userNotFound,
     TResult Function()? weakPassword,
     TResult Function()? operationNotAllowed,
+    TResult Function()? invalidEmail,
   }) {
     return userNotFound?.call();
   }
@@ -1545,6 +1605,7 @@ class _$_UserNotFound implements _UserNotFound {
     TResult Function()? userNotFound,
     TResult Function()? weakPassword,
     TResult Function()? operationNotAllowed,
+    TResult Function()? invalidEmail,
     required TResult orElse(),
   }) {
     if (userNotFound != null) {
@@ -1568,6 +1629,7 @@ class _$_UserNotFound implements _UserNotFound {
     required TResult Function(_UserNotFound value) userNotFound,
     required TResult Function(_WeakPassword value) weakPassword,
     required TResult Function(_OperationNotAllowed value) operationNotAllowed,
+    required TResult Function(_InvalidEmail value) invalidEmail,
   }) {
     return userNotFound(this);
   }
@@ -1586,6 +1648,7 @@ class _$_UserNotFound implements _UserNotFound {
     TResult Function(_UserNotFound value)? userNotFound,
     TResult Function(_WeakPassword value)? weakPassword,
     TResult Function(_OperationNotAllowed value)? operationNotAllowed,
+    TResult Function(_InvalidEmail value)? invalidEmail,
   }) {
     return userNotFound?.call(this);
   }
@@ -1604,6 +1667,7 @@ class _$_UserNotFound implements _UserNotFound {
     TResult Function(_UserNotFound value)? userNotFound,
     TResult Function(_WeakPassword value)? weakPassword,
     TResult Function(_OperationNotAllowed value)? operationNotAllowed,
+    TResult Function(_InvalidEmail value)? invalidEmail,
     required TResult orElse(),
   }) {
     if (userNotFound != null) {
@@ -1669,6 +1733,7 @@ class _$_WeakPassword implements _WeakPassword {
     required TResult Function() userNotFound,
     required TResult Function() weakPassword,
     required TResult Function() operationNotAllowed,
+    required TResult Function() invalidEmail,
   }) {
     return weakPassword();
   }
@@ -1687,6 +1752,7 @@ class _$_WeakPassword implements _WeakPassword {
     TResult Function()? userNotFound,
     TResult Function()? weakPassword,
     TResult Function()? operationNotAllowed,
+    TResult Function()? invalidEmail,
   }) {
     return weakPassword?.call();
   }
@@ -1705,6 +1771,7 @@ class _$_WeakPassword implements _WeakPassword {
     TResult Function()? userNotFound,
     TResult Function()? weakPassword,
     TResult Function()? operationNotAllowed,
+    TResult Function()? invalidEmail,
     required TResult orElse(),
   }) {
     if (weakPassword != null) {
@@ -1728,6 +1795,7 @@ class _$_WeakPassword implements _WeakPassword {
     required TResult Function(_UserNotFound value) userNotFound,
     required TResult Function(_WeakPassword value) weakPassword,
     required TResult Function(_OperationNotAllowed value) operationNotAllowed,
+    required TResult Function(_InvalidEmail value) invalidEmail,
   }) {
     return weakPassword(this);
   }
@@ -1746,6 +1814,7 @@ class _$_WeakPassword implements _WeakPassword {
     TResult Function(_UserNotFound value)? userNotFound,
     TResult Function(_WeakPassword value)? weakPassword,
     TResult Function(_OperationNotAllowed value)? operationNotAllowed,
+    TResult Function(_InvalidEmail value)? invalidEmail,
   }) {
     return weakPassword?.call(this);
   }
@@ -1764,6 +1833,7 @@ class _$_WeakPassword implements _WeakPassword {
     TResult Function(_UserNotFound value)? userNotFound,
     TResult Function(_WeakPassword value)? weakPassword,
     TResult Function(_OperationNotAllowed value)? operationNotAllowed,
+    TResult Function(_InvalidEmail value)? invalidEmail,
     required TResult orElse(),
   }) {
     if (weakPassword != null) {
@@ -1829,6 +1899,7 @@ class _$_OperationNotAllowed implements _OperationNotAllowed {
     required TResult Function() userNotFound,
     required TResult Function() weakPassword,
     required TResult Function() operationNotAllowed,
+    required TResult Function() invalidEmail,
   }) {
     return operationNotAllowed();
   }
@@ -1847,6 +1918,7 @@ class _$_OperationNotAllowed implements _OperationNotAllowed {
     TResult Function()? userNotFound,
     TResult Function()? weakPassword,
     TResult Function()? operationNotAllowed,
+    TResult Function()? invalidEmail,
   }) {
     return operationNotAllowed?.call();
   }
@@ -1865,6 +1937,7 @@ class _$_OperationNotAllowed implements _OperationNotAllowed {
     TResult Function()? userNotFound,
     TResult Function()? weakPassword,
     TResult Function()? operationNotAllowed,
+    TResult Function()? invalidEmail,
     required TResult orElse(),
   }) {
     if (operationNotAllowed != null) {
@@ -1888,6 +1961,7 @@ class _$_OperationNotAllowed implements _OperationNotAllowed {
     required TResult Function(_UserNotFound value) userNotFound,
     required TResult Function(_WeakPassword value) weakPassword,
     required TResult Function(_OperationNotAllowed value) operationNotAllowed,
+    required TResult Function(_InvalidEmail value) invalidEmail,
   }) {
     return operationNotAllowed(this);
   }
@@ -1906,6 +1980,7 @@ class _$_OperationNotAllowed implements _OperationNotAllowed {
     TResult Function(_UserNotFound value)? userNotFound,
     TResult Function(_WeakPassword value)? weakPassword,
     TResult Function(_OperationNotAllowed value)? operationNotAllowed,
+    TResult Function(_InvalidEmail value)? invalidEmail,
   }) {
     return operationNotAllowed?.call(this);
   }
@@ -1924,6 +1999,7 @@ class _$_OperationNotAllowed implements _OperationNotAllowed {
     TResult Function(_UserNotFound value)? userNotFound,
     TResult Function(_WeakPassword value)? weakPassword,
     TResult Function(_OperationNotAllowed value)? operationNotAllowed,
+    TResult Function(_InvalidEmail value)? invalidEmail,
     required TResult orElse(),
   }) {
     if (operationNotAllowed != null) {
@@ -1935,4 +2011,170 @@ class _$_OperationNotAllowed implements _OperationNotAllowed {
 
 abstract class _OperationNotAllowed implements FirestoreFailure {
   const factory _OperationNotAllowed() = _$_OperationNotAllowed;
+}
+
+/// @nodoc
+abstract class _$InvalidEmailCopyWith<$Res> {
+  factory _$InvalidEmailCopyWith(
+          _InvalidEmail value, $Res Function(_InvalidEmail) then) =
+      __$InvalidEmailCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$InvalidEmailCopyWithImpl<$Res>
+    extends _$FirestoreFailureCopyWithImpl<$Res>
+    implements _$InvalidEmailCopyWith<$Res> {
+  __$InvalidEmailCopyWithImpl(
+      _InvalidEmail _value, $Res Function(_InvalidEmail) _then)
+      : super(_value, (v) => _then(v as _InvalidEmail));
+
+  @override
+  _InvalidEmail get _value => super._value as _InvalidEmail;
+}
+
+/// @nodoc
+
+class _$_InvalidEmail implements _InvalidEmail {
+  const _$_InvalidEmail();
+
+  @override
+  String toString() {
+    return 'FirestoreFailure.invalidEmail()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _InvalidEmail);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() unexpected,
+    required TResult Function() insufficientPermission,
+    required TResult Function() permissionDenied,
+    required TResult Function() tooManyRequests,
+    required TResult Function() serverError,
+    required TResult Function() notFound,
+    required TResult Function() invalidCredentials,
+    required TResult Function() emailAlreadyInUse,
+    required TResult Function() userNotFound,
+    required TResult Function() weakPassword,
+    required TResult Function() operationNotAllowed,
+    required TResult Function() invalidEmail,
+  }) {
+    return invalidEmail();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? unexpected,
+    TResult Function()? insufficientPermission,
+    TResult Function()? permissionDenied,
+    TResult Function()? tooManyRequests,
+    TResult Function()? serverError,
+    TResult Function()? notFound,
+    TResult Function()? invalidCredentials,
+    TResult Function()? emailAlreadyInUse,
+    TResult Function()? userNotFound,
+    TResult Function()? weakPassword,
+    TResult Function()? operationNotAllowed,
+    TResult Function()? invalidEmail,
+  }) {
+    return invalidEmail?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? unexpected,
+    TResult Function()? insufficientPermission,
+    TResult Function()? permissionDenied,
+    TResult Function()? tooManyRequests,
+    TResult Function()? serverError,
+    TResult Function()? notFound,
+    TResult Function()? invalidCredentials,
+    TResult Function()? emailAlreadyInUse,
+    TResult Function()? userNotFound,
+    TResult Function()? weakPassword,
+    TResult Function()? operationNotAllowed,
+    TResult Function()? invalidEmail,
+    required TResult orElse(),
+  }) {
+    if (invalidEmail != null) {
+      return invalidEmail();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Unexpected value) unexpected,
+    required TResult Function(_InsufficientPermission value)
+        insufficientPermission,
+    required TResult Function(_PermissionDenied value) permissionDenied,
+    required TResult Function(_TooManyRequests value) tooManyRequests,
+    required TResult Function(_ServerError value) serverError,
+    required TResult Function(_NotFound value) notFound,
+    required TResult Function(_InvalidCredentials value) invalidCredentials,
+    required TResult Function(_EmailAlreadyInUse value) emailAlreadyInUse,
+    required TResult Function(_UserNotFound value) userNotFound,
+    required TResult Function(_WeakPassword value) weakPassword,
+    required TResult Function(_OperationNotAllowed value) operationNotAllowed,
+    required TResult Function(_InvalidEmail value) invalidEmail,
+  }) {
+    return invalidEmail(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_Unexpected value)? unexpected,
+    TResult Function(_InsufficientPermission value)? insufficientPermission,
+    TResult Function(_PermissionDenied value)? permissionDenied,
+    TResult Function(_TooManyRequests value)? tooManyRequests,
+    TResult Function(_ServerError value)? serverError,
+    TResult Function(_NotFound value)? notFound,
+    TResult Function(_InvalidCredentials value)? invalidCredentials,
+    TResult Function(_EmailAlreadyInUse value)? emailAlreadyInUse,
+    TResult Function(_UserNotFound value)? userNotFound,
+    TResult Function(_WeakPassword value)? weakPassword,
+    TResult Function(_OperationNotAllowed value)? operationNotAllowed,
+    TResult Function(_InvalidEmail value)? invalidEmail,
+  }) {
+    return invalidEmail?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Unexpected value)? unexpected,
+    TResult Function(_InsufficientPermission value)? insufficientPermission,
+    TResult Function(_PermissionDenied value)? permissionDenied,
+    TResult Function(_TooManyRequests value)? tooManyRequests,
+    TResult Function(_ServerError value)? serverError,
+    TResult Function(_NotFound value)? notFound,
+    TResult Function(_InvalidCredentials value)? invalidCredentials,
+    TResult Function(_EmailAlreadyInUse value)? emailAlreadyInUse,
+    TResult Function(_UserNotFound value)? userNotFound,
+    TResult Function(_WeakPassword value)? weakPassword,
+    TResult Function(_OperationNotAllowed value)? operationNotAllowed,
+    TResult Function(_InvalidEmail value)? invalidEmail,
+    required TResult orElse(),
+  }) {
+    if (invalidEmail != null) {
+      return invalidEmail(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _InvalidEmail implements FirestoreFailure {
+  const factory _InvalidEmail() = _$_InvalidEmail;
 }
