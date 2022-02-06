@@ -12,7 +12,7 @@ abstract class ProductCategory implements _$ProductCategory {
 
   const factory ProductCategory({
     required String id,
-    String? name,
+    required String name,
     String? description,
     int? order,
     @Default(true) bool active,
@@ -22,7 +22,7 @@ abstract class ProductCategory implements _$ProductCategory {
 
   factory ProductCategory.fromJson(Map<String, dynamic> json) => _$ProductCategoryFromJson(json);
 
-  factory ProductCategory.empty() => const ProductCategory(id: '');
+  factory ProductCategory.empty() => const ProductCategory(id: '', name: '');
 
   factory ProductCategory.fromDocument(DocumentSnapshot doc) =>
       ProductCategory.fromJson(ModelHelpers().fromDocument(doc.data()!)).copyWith(id: doc.id);
