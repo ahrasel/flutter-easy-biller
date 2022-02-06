@@ -12,10 +12,18 @@ abstract class AppUser implements _$AppUser {
 
   const factory AppUser({
     required String id,
-    String? name,
+    String? firstName,
+    String? lastName,
+    String? email,
+    String? phoneNumber,
+    String? photoUrl,
+    String? gender,
+    String? address,
+    DateTime? dob,
+    @Default('client') String userType,
     @Default(false) bool active,
-    String? createdAt,
-    String? updatedAt,
+    DateTime? createdAt,
+    DateTime? updatedAt,
   }) = _AppUser;
 
   factory AppUser.fromJson(Map<String, dynamic> json) => _$AppUserFromJson(json);
