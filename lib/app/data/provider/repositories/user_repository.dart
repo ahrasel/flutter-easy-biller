@@ -49,21 +49,43 @@ class UserRepository extends Repository implements IUserRepository {
   }
 
   @override
-  Future<Either<FirestoreFailure, AppUser>> deleteUser({required AppUser user}) {
-    // TODO: implement deleteUser
-    throw UnimplementedError();
+  Future<Either<FirestoreFailure, AppUser>> deleteUser({required AppUser user}) async {
+    try {
+      await firestore.collection(_userCollection).doc(user.id).delete();
+      return right(user);
+    } catch (e) {
+      if (kDebugMode) {
+        print(e);
+      }
+      return left(const FirestoreFailure.serverError());
+    }
   }
 
   @override
-  Future<Either<FirestoreFailure, AppUser>> toggleStatus({required AppUser user}) {
-    // TODO: implement toggleStatus
-    throw UnimplementedError();
+  Future<Either<FirestoreFailure, AppUser>> toggleStatus({required AppUser user}) async {
+    try {
+      user = user.copyWith(active: !user.active);
+      await firestore.collection(_userCollection).doc(user.id).set(user.toJson());
+      return right(user);
+    } catch (e) {
+      if (kDebugMode) {
+        print(e);
+      }
+      return left(const FirestoreFailure.serverError());
+    }
   }
 
   @override
   Future<Either<FirestoreFailure, AppUser>> updateUser(
-      {required AppUser user, required String password}) {
-    // TODO: implement updateUser
-    throw UnimplementedError();
+      {required AppUser user, required String password}) async {
+    try {
+      await firestore.collection(_userCollection).doc(user.id).set(user.toJson());
+      return right(user);
+    } catch (e) {
+      if (kDebugMode) {
+        print(e);
+      }
+      return left(const FirestoreFailure.serverError());
+    }
   }
 }
