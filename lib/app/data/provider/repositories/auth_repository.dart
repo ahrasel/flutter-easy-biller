@@ -32,6 +32,8 @@ class AuthRepository extends Repository implements IAuthRepository {
       } else {
         return const Left(FirestoreFailure.serverError());
       }
+    } catch (e) {
+      return const Left(FirestoreFailure.serverError());
     }
   }
 }

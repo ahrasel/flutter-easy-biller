@@ -10,6 +10,7 @@ import 'base_controller.dart';
 
 class LoginController extends BaseController {
   IAuthRepository? _authRepository;
+  var obscureText = true.obs;
 
   LoginController(AuthRepository authRepository) {
     _authRepository = authRepository;
@@ -40,9 +41,21 @@ class LoginController extends BaseController {
     }
   }
 
-  void email(String value) {}
+  String? validateEmail(String email) {
+    if (email.isEmpty) {
+      return 'Email is required';
+    }
+    return null;
+  }
 
-  void password(String value) {}
+  String? validatePassword(String password) {
+    if (password.isEmpty) {
+      return 'Password is required';
+    }
+    return null;
+  }
 
-  validateEmail(value) {}
+  void togglePassword() {
+    obscureText.value = !obscureText.value;
+  }
 }

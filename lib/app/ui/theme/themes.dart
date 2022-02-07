@@ -10,6 +10,9 @@ class Themes {
     shadowColor: Colors.grey,
     colorScheme: ColorScheme.fromSwatch().copyWith(secondary: Colors.amber),
     inputDecorationTheme: InputDecorationTheme(
+      iconColor: Colors.blue,
+      prefixIconColor: Colors.blue,
+      suffixIconColor: Colors.blue,
       contentPadding: const EdgeInsets.symmetric(horizontal: 10.0),
       border: OutlineInputBorder(
         borderRadius: BorderRadius.circular(50),
