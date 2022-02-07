@@ -32,22 +32,18 @@ class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
-    return GetMaterialApp(
-      title: 'Easy Biller',
-      debugShowCheckedModeBanner: false,
-      theme: Themes().lightTheme,
-      darkTheme: Themes().darkTheme,
-      themeMode: ThemeService().getThemeMode(),
-      translations: Translation(),
-      locale: const Locale('en'),
-      fallbackLocale: const Locale('en'),
-      initialRoute: AppRoutes.splash,
-      unknownRoute: AppPages.unknownRoutePage,
-      getPages: AppPages.pages,
-      builder: (_, child) {
-        return child!;
-      },
-    );
-  }
+  Widget build(BuildContext context) => GetMaterialApp(
+        title: 'Easy Biller',
+        debugShowCheckedModeBanner: false,
+        theme: Themes().lightTheme,
+        darkTheme: Themes().darkTheme,
+        themeMode: ThemeService().getThemeMode(),
+        translations: Translation(),
+        locale: const Locale('en'),
+        fallbackLocale: const Locale('en'),
+        initialRoute: AppRoutes.splash,
+        unknownRoute: AppPages.unknownRoutePage,
+        getPages: AppPages.pages,
+        builder: (_, child) => child!,
+      );
 }

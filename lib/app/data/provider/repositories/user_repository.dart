@@ -1,6 +1,6 @@
+import 'package:dartz/dartz.dart';
 import 'package:easy_biller/app/data/models/appuser/appuser.dart';
 import 'package:easy_biller/app/data/provider/repositories/repository.dart';
-import 'package:dartz/dartz.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
 
@@ -15,16 +15,18 @@ class UserRepository extends Repository implements IUserRepository {
       {required AppUser user, required String password}) async {
     try {
       // check user already exist with email
-      var existUser =
-          await firestore.collection(_userCollection).where('email', isEqualTo: user.email).get();
+      var existUser = await firestore
+          .collection(_userCollection)
+          .where('email', isEqualTo: user.email)
+          .get();
 
       if (existUser.docs.isNotEmpty) {
         left(const FirestoreFailure.emailAlreadyInUse());
       }
 
       // create account with email and password
-      UserCredential cred =
-          await firebaseAuth.createUserWithEmailAndPassword(email: user.email, password: password);
+      UserCredential cred = await firebaseAuth.createUserWithEmailAndPassword(
+          email: user.email, password: password);
 
       user = user.copyWith(id: cred.user!.uid);
 
@@ -49,7 +51,8 @@ class UserRepository extends Repository implements IUserRepository {
   }
 
   @override
-  Future<Either<FirestoreFailure, AppUser>> deleteUser({required AppUser user}) async {
+  Future<Either<FirestoreFailure, AppUser>> deleteUser(
+      {required AppUser user}) async {
     try {
       await firestore.collection(_userCollection).doc(user.id).delete();
       return right(user);
@@ -62,10 +65,14 @@ class UserRepository extends Repository implements IUserRepository {
   }
 
   @override
-  Future<Either<FirestoreFailure, AppUser>> toggleStatus({required AppUser user}) async {
+  Future<Either<FirestoreFailure, AppUser>> toggleStatus(
+      {required AppUser user}) async {
     try {
       user = user.copyWith(active: !user.active);
-      await firestore.collection(_userCollection).doc(user.id).set(user.toJson());
+      await firestore
+          .collection(_userCollection)
+          .doc(user.id)
+          .set(user.toJson());
       return right(user);
     } catch (e) {
       if (kDebugMode) {
@@ -79,7 +86,10 @@ class UserRepository extends Repository implements IUserRepository {
   Future<Either<FirestoreFailure, AppUser>> updateUser(
       {required AppUser user, required String password}) async {
     try {
-      await firestore.collection(_userCollection).doc(user.id).set(user.toJson());
+      await firestore
+          .collection(_userCollection)
+          .doc(user.id)
+          .set(user.toJson());
       return right(user);
     } catch (e) {
       if (kDebugMode) {

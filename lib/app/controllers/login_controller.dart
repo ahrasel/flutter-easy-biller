@@ -18,8 +18,8 @@ class LoginController extends BaseController {
   // login with email and password
   void login({required String email, required String password}) async {
     try {
-      var response =
-          await _authRepository!.loginWithEmailAndPassword(email: email, password: password);
+      var response = await _authRepository!
+          .loginWithEmailAndPassword(email: email, password: password);
       var result = response.fold((l) => l, (r) => r);
 
       if (result is AppUser) {

@@ -4,7 +4,8 @@ part 'firestore_failure.freezed.dart';
 @freezed
 abstract class FirestoreFailure with _$FirestoreFailure {
   const factory FirestoreFailure.unexpected() = _Unexpected;
-  const factory FirestoreFailure.insufficientPermission() = _InsufficientPermission;
+  const factory FirestoreFailure.insufficientPermission() =
+      _InsufficientPermission;
   const factory FirestoreFailure.permissionDenied() = _PermissionDenied;
   const factory FirestoreFailure.tooManyRequests() = _TooManyRequests;
   const factory FirestoreFailure.serverError() = _ServerError;

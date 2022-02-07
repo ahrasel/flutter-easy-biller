@@ -6,13 +6,10 @@ class ThemeService {
   final _getStorage = GetStorage();
   final storageKey = 'isDarkMode';
 
-  ThemeMode getThemeMode() {
-    return isSavedDarkMode() ? ThemeMode.dark : ThemeMode.light;
-  }
+  ThemeMode getThemeMode() =>
+      isSavedDarkMode() ? ThemeMode.dark : ThemeMode.light;
 
-  bool isSavedDarkMode() {
-    return _getStorage.read(storageKey) ?? false;
-  }
+  bool isSavedDarkMode() => _getStorage.read(storageKey) ?? false;
 
   void saveThemeMode(bool isDarkMode) {
     _getStorage.write(storageKey, isDarkMode);

@@ -1,11 +1,11 @@
-import '../bindings/login_binding.dart';
-import '../ui/pages/login_page/login_page.dart';
-import '../bindings/splash_binding.dart';
-import '../ui/pages/splash_page/splash_page.dart';
 import 'package:get/get.dart';
 
 import '../bindings/home_binding.dart';
+import '../bindings/login_binding.dart';
+import '../bindings/splash_binding.dart';
 import '../ui/pages/home_page/home_page.dart';
+import '../ui/pages/login_page/login_page.dart';
+import '../ui/pages/splash_page/splash_page.dart';
 import '../ui/pages/unknown_route_page/unknown_route_page.dart';
 import 'app_routes.dart';
 
@@ -34,7 +34,7 @@ class AppPages {
     ),
     GetPage(
       name: AppRoutes.login,
-      page: () => LoginPage(),
+      page: LoginPage.new,
       binding: LoginBinding(),
       transition: _defaultTransition,
     ),

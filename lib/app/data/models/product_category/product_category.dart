@@ -20,12 +20,14 @@ abstract class ProductCategory implements _$ProductCategory {
     DateTime? updatedAt,
   }) = _ProductCategory;
 
-  factory ProductCategory.fromJson(Map<String, dynamic> json) => _$ProductCategoryFromJson(json);
+  factory ProductCategory.fromJson(Map<String, dynamic> json) =>
+      _$ProductCategoryFromJson(json);
 
   factory ProductCategory.empty() => const ProductCategory(id: '', name: '');
 
   factory ProductCategory.fromDocument(DocumentSnapshot doc) =>
-      ProductCategory.fromJson(ModelHelpers().fromDocument(doc.data()!)).copyWith(id: doc.id);
+      ProductCategory.fromJson(ModelHelpers().fromDocument(doc.data()!))
+          .copyWith(id: doc.id);
 
   Map<String, dynamic> toDocument() => ModelHelpers().toDocument(toJson());
 }

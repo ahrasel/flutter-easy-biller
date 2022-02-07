@@ -7,13 +7,11 @@ class StartLayout extends GetView<MainController> {
   const StartLayout({Key? key, required this.child}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Column(
-        children: [
-          Expanded(child: child),
-        ],
-      ),
-    );
-  }
+  Widget build(BuildContext context) => Scaffold(
+        body: Column(
+          children: [
+            Expanded(child: child),
+          ],
+        ),
+      );
 }

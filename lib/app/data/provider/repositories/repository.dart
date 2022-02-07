@@ -9,32 +9,40 @@ class Repository implements IRepository {
 
   @override
   Future<bool> existWithKey(
-      {required String collection, required String filed, required String value}) async {
-    var snapShot = await firestore.collection(collection).where(filed, isEqualTo: value).get();
+      {required String collection,
+      required String filed,
+      required String value}) async {
+    var snapShot = await firestore
+        .collection(collection)
+        .where(filed, isEqualTo: value)
+        .get();
 
     return snapShot.docs.isNotEmpty;
   }
 
   @override
-  Future<void> deleteDoc({required String collection, required String id}) async {
+  Future<void> deleteDoc(
+      {required String collection, required String id}) async {
     firestore.collection(collection).doc(id).delete();
   }
 
   @override
   Future<DocumentReference<Map<String, dynamic>>> createDoc(
-      {required String collection, required Map<String, dynamic> data}) {
-    return firestore.collection(collection).add(data);
-  }
+          {required String collection, required Map<String, dynamic> data}) =>
+      firestore.collection(collection).add(data);
 
   @override
   Future<void> updateDoc(
-      {required String collection, required String id, required Map<String, dynamic> data}) {
-    return firestore.collection(collection).doc(id).set(data);
-  }
+          {required String collection,
+          required String id,
+          required Map<String, dynamic> data}) =>
+      firestore.collection(collection).doc(id).set(data);
 
   @override
   Future<List<QueryDocumentSnapshot<T>>> allDocs<T>(
-      {required String collection, required model, required String orderBy}) async {
+      {required String collection,
+      required model,
+      required String orderBy}) async {
     var ref = await firestore
         .collection(collection)
         .withConverter<T>(

@@ -1,7 +1,7 @@
+import 'package:dartz/dartz.dart';
 import 'package:easy_biller/app/data/models/appuser/appuser.dart';
 import 'package:easy_biller/app/data/provider/repositories/repository.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:dartz/dartz.dart';
 import '../../failures/firestore_failure.dart';
 import 'i_auth_repository.dart';
 
@@ -13,7 +13,8 @@ class AuthRepository extends Repository implements IAuthRepository {
   Future<Either<FirestoreFailure, AppUser>> loginWithEmailAndPassword(
       {required String email, required String password}) async {
     try {
-      final user = await firebaseAuth.signInWithEmailAndPassword(email: email, password: password);
+      final user = await firebaseAuth.signInWithEmailAndPassword(
+          email: email, password: password);
 
       final docRef = firestore.collection('users').doc(user.user?.uid);
       final doc = await docRef.get();

@@ -24,13 +24,15 @@ abstract class Product implements _$Product {
     DateTime? updatedAt,
   }) = _Product;
 
-  factory Product.fromJson(Map<String, dynamic> json) => _$ProductFromJson(json);
+  factory Product.fromJson(Map<String, dynamic> json) =>
+      _$ProductFromJson(json);
 
-  factory Product.empty() =>
-      const Product(id: '', name: '', categoryId: '', price: 0, unit: '', code: '');
+  factory Product.empty() => const Product(
+      id: '', name: '', categoryId: '', price: 0, unit: '', code: '');
 
   factory Product.fromDocument(DocumentSnapshot doc) =>
-      Product.fromJson(ModelHelpers().fromDocument(doc.data()!)).copyWith(id: doc.id);
+      Product.fromJson(ModelHelpers().fromDocument(doc.data()!))
+          .copyWith(id: doc.id);
 
   Map<String, dynamic> toDocument() => ModelHelpers().toDocument(toJson());
 }

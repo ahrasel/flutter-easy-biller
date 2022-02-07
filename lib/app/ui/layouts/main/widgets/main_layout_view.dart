@@ -8,7 +8,5 @@ class MainLayoutView extends StatelessWidget {
   const MainLayoutView({Key? key, required this.child}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
-    return MainLayout(child: child);
-  }
+  Widget build(BuildContext context) => MainLayout(child: child);
 }

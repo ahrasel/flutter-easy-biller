@@ -26,13 +26,15 @@ abstract class AppUser implements _$AppUser {
     DateTime? updatedAt,
   }) = _AppUser;
 
-  factory AppUser.fromJson(Map<String, dynamic> json) => _$AppUserFromJson(json);
+  factory AppUser.fromJson(Map<String, dynamic> json) =>
+      _$AppUserFromJson(json);
 
-  factory AppUser.empty() =>
-      const AppUser(id: '', email: '', firstName: '', lastName: '', phoneNumber: '');
+  factory AppUser.empty() => const AppUser(
+      id: '', email: '', firstName: '', lastName: '', phoneNumber: '');
 
   factory AppUser.fromDocument(DocumentSnapshot doc) =>
-      AppUser.fromJson(ModelHelpers().fromDocument(doc.data()!)).copyWith(id: doc.id);
+      AppUser.fromJson(ModelHelpers().fromDocument(doc.data()!))
+          .copyWith(id: doc.id);
 
   Map<String, dynamic> toDocument() => ModelHelpers().toDocument(toJson());
 }
