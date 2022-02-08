@@ -4,4 +4,5 @@ class AppRoutes {
   static const unknown = '/404';
   static const login = '/login';
   static const account = '/account';
+  static const invoices = '/invoices';
 }

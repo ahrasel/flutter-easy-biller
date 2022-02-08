@@ -1,3 +1,5 @@
+import '../bindings/invoices_binding.dart';
+import '../ui/pages/invoices_page/invoices_page.dart';
 import '../bindings/account_binding.dart';
 import '../ui/pages/account_page/account_page.dart';
 import 'package:get/get.dart';
@@ -25,7 +27,11 @@ class AppPages {
     GetPage(
       name: AppRoutes.home,
       page: () => const HomePage(),
-      bindings: [HomeBinding(), AccountBinding()],
+      bindings: [
+        HomeBinding(),
+        AccountBinding(),
+        InvoicesBinding(),
+      ],
       transition: _defaultTransition,
     ),
     GetPage(
@@ -43,6 +49,11 @@ class AppPages {
     GetPage(
       name: AppRoutes.account,
       page: AccountPage.new,
+      transition: _defaultTransition,
+    ),
+    GetPage(
+      name: AppRoutes.invoices,
+      page: InvoicesPage.new,
       transition: _defaultTransition,
     ),
   ];
