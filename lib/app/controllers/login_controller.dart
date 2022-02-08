@@ -29,9 +29,8 @@ class LoginController extends BaseController {
       }
 
       if (result is FirestoreFailure) {
-        if (kDebugMode) {
-          print(result);
-        }
+        errorSnackbar(
+            message: fireStoreErrorMessage(result), title: 'User Login');
       }
     } catch (e) {
       // show error message
