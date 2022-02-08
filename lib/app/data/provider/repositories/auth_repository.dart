@@ -20,7 +20,7 @@ class AuthRepository extends Repository implements IAuthRepository {
       final doc = await docRef.get();
 
       if (doc.exists) {
-        return Right(AppUser.fromDocument(doc));
+        return Right(AppUser.fromJson(doc.data()!));
       } else {
         return const Left(FirestoreFailure.notFound());
       }

@@ -38,19 +38,22 @@ class LoginPage extends GetView<LoginController> {
                       validator: (value) => controller.validateEmail(value!),
                     ),
                     const SizedBox(height: 10),
-                    TextFormField(
-                      autovalidateMode: AutovalidateMode.onUserInteraction,
-                      obscureText: controller.obscureText.value,
-                      controller: _passwordController,
-                      decoration: InputDecoration(
-                        labelText: 'Password',
-                        prefixIcon: const Icon(Icons.lock),
-                        suffixIcon: InkWell(
-                            onTap: () => controller.togglePassword(),
-                            child: const Icon(Icons.remove_red_eye)),
-                      ),
-                      validator: (value) => controller.validatePassword(value!),
-                    ),
+                    Obx(() => TextFormField(
+                          autovalidateMode: AutovalidateMode.onUserInteraction,
+                          obscureText: controller.obscureText.value,
+                          controller: _passwordController,
+                          decoration: InputDecoration(
+                            labelText: 'Password',
+                            prefixIcon: const Icon(Icons.lock),
+                            suffixIcon: InkWell(
+                                onTap: () => controller.togglePassword(),
+                                child: Icon(controller.obscureText.value
+                                    ? Icons.visibility
+                                    : Icons.visibility_off)),
+                          ),
+                          validator: (value) =>
+                              controller.validatePassword(value!),
+                        )),
                     const SizedBox(height: 10),
                     SizedBox(
                       width: double.infinity,
