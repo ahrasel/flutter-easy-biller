@@ -8,9 +8,9 @@ class HomePage extends GetView<HomeController> {
   const HomePage({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) => const MainLayoutView(
+  Widget build(BuildContext context) => MainLayoutView(
         child: Center(
-          child: Text('Home'),
+          child: Text('Home', style: Get.textTheme.subtitle1),
         ),
       );
 }

@@ -1,3 +1,5 @@
+import '../bindings/account_binding.dart';
+import '../ui/pages/account_page/account_page.dart';
 import 'package:get/get.dart';
 
 import '../bindings/home_binding.dart';
@@ -23,7 +25,7 @@ class AppPages {
     GetPage(
       name: AppRoutes.home,
       page: () => const HomePage(),
-      binding: HomeBinding(),
+      bindings: [HomeBinding(), AccountBinding()],
       transition: _defaultTransition,
     ),
     GetPage(
@@ -36,6 +38,11 @@ class AppPages {
       name: AppRoutes.login,
       page: LoginPage.new,
       binding: LoginBinding(),
+      transition: _defaultTransition,
+    ),
+    GetPage(
+      name: AppRoutes.account,
+      page: AccountPage.new,
       transition: _defaultTransition,
     ),
   ];

@@ -8,28 +8,51 @@ class MainLayout extends GetView<MainController> {
 
   @override
   Widget build(BuildContext context) => Scaffold(
+        appBar: AppBar(
+          elevation: 0,
+          title: const Text('Easy Biller'),
+          actions: [
+            IconButton(
+              icon: const Icon(Icons.light_mode),
+              onPressed: () {},
+            ),
+            IconButton(
+              icon: const Text('EN'),
+              onPressed: () {},
+            ),
+            IconButton(
+              icon: const Icon(Icons.notifications),
+              onPressed: () {},
+            ),
+            IconButton(
+              icon: const Icon(Icons.logout),
+              onPressed: () {},
+            ),
+          ],
+        ),
+        drawer: Drawer(),
         body: Column(
           children: [
             Expanded(child: child),
           ],
         ),
-        bottomNavigationBar: BottomNavigationBar(
-          items: const [
-            BottomNavigationBarItem(
-              icon: Icon(Icons.home),
-              label: 'Home',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.search),
-              label: 'Search',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.person),
-              label: 'Profile',
-            ),
-          ],
-          currentIndex: 0,
-          onTap: (index) => controller.currentIndex.value = index,
-        ),
+        bottomNavigationBar: Obx(() => BottomNavigationBar(
+              items: const [
+                BottomNavigationBarItem(
+                  icon: Icon(Icons.dashboard),
+                  label: 'Home',
+                ),
+                BottomNavigationBarItem(
+                  icon: Icon(Icons.inventory_outlined),
+                  label: 'Invoices',
+                ),
+                BottomNavigationBarItem(
+                  icon: Icon(Icons.person_pin),
+                  label: 'Account',
+                ),
+              ],
+              currentIndex: controller.currentIndex.value,
+              onTap: (index) => controller.currentIndex.value = index,
+            )),
       );
 }
