@@ -33,7 +33,6 @@ class AppPages {
       page: () => const HomePage(),
       bindings: [
         HomeBinding(),
-        AccountBinding(),
         InvoicesBinding(),
       ],
       transition: _defaultTransition,
@@ -53,6 +52,7 @@ class AppPages {
     GetPage(
       name: AppRoutes.account,
       page: AccountPage.new,
+      binding: AccountBinding(),
       transition: _defaultTransition,
     ),
     GetPage(

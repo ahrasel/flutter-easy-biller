@@ -1,4 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:easy_biller/app/data/models/appuser/appuser.dart';
+import 'package:easy_biller/app/data/failures/firestore_failure.dart';
+import 'package:dartz/dartz.dart';
 import 'package:easy_biller/app/data/provider/repositories/i_repository.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
@@ -55,5 +58,18 @@ class Repository implements IRepository {
         .get();
 
     return ref.docs;
+  }
+
+  @override
+  Future<Either<FirestoreFailure, AppUser>> currentUser() async {
+    try {
+      var snapshot = await firestore
+          .collection('users')
+          .doc(firebaseAuth.currentUser!.uid)
+          .get();
+      return right(AppUser.fromDocument(snapshot));
+    } catch (e) {
+      return left(FirestoreFailure.serverError());
+    }
   }
 }
