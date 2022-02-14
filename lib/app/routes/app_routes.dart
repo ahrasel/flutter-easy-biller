@@ -5,4 +5,6 @@ class AppRoutes {
   static const login = '/login';
   static const account = '/account';
   static const invoices = '/invoices';
+  static const changePassword = '/change-password';
+  static const settings = '/settings';
 }

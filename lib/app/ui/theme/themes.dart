@@ -73,12 +73,12 @@ class Themes {
         fontWeight: FontWeight.bold,
       ),
       subtitle1: GoogleFonts.roboto(
-        color: Colors.black54,
+        color: Colors.black87,
         fontSize: 16,
         fontWeight: FontWeight.w700,
       ),
       subtitle2: GoogleFonts.roboto(
-        color: Colors.black54,
+        color: Colors.black87,
         fontSize: 14,
         fontWeight: FontWeight.w700,
       ),
