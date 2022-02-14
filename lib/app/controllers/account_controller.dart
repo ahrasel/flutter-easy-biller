@@ -1,5 +1,4 @@
 import 'package:easy_biller/app/controllers/base_controller.dart';
-import 'package:easy_biller/app/data/failures/firestore_failure.dart';
 import 'package:easy_biller/app/data/models/appuser/appuser.dart';
 import 'package:easy_biller/app/data/provider/repositories/account_repository.dart';
 import 'package:get/get.dart';

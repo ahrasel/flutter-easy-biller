@@ -23,6 +23,4 @@ abstract class IRepository {
       {required String collection,
       required String id,
       required Map<String, dynamic> data});
-
-  Future<Either<FirestoreFailure, AppUser>> currentUser();
 }
