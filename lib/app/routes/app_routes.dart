@@ -7,4 +7,5 @@ class AppRoutes {
   static const invoices = '/invoices';
   static const changePassword = '/change-password';
   static const settings = '/settings';
+  static const updateProfile = '/update-profile';
 }

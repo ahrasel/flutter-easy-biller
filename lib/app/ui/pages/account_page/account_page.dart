@@ -1,3 +1,4 @@
+import 'package:easy_biller/app/routes/app_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -91,7 +92,7 @@ class AccountPage extends GetView<AccountController> {
                 width: double.infinity,
                 height: 80,
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () => Get.toNamed(AppRoutes.updateProfile),
                   child: const Text('Edit Profile'),
                 ),
               ),

@@ -1,3 +1,5 @@
+import '../bindings/update_profile_binding.dart';
+import '../ui/pages/update_profile_page/update_profile_page.dart';
 import '../bindings/settings_binding.dart';
 import '../ui/pages/settings_page/settings_page.dart';
 import '../bindings/change_password_binding.dart';
@@ -70,6 +72,12 @@ class AppPages {
       name: AppRoutes.settings,
       page: SettingsPage.new,
       binding: SettingsBinding(),
+      transition: _defaultTransition,
+    ),
+    GetPage(
+      name: AppRoutes.updateProfile,
+      page: UpdateProfilePage.new,
+      binding: UpdateProfileBinding(),
       transition: _defaultTransition,
     ),
   ];
