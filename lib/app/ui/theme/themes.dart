@@ -43,32 +43,32 @@ class Themes {
     ),
     textTheme: TextTheme(
       headline1: GoogleFonts.roboto(
-        color: Colors.black54,
+        color: Colors.black87,
         fontSize: 26,
         fontWeight: FontWeight.bold,
       ),
       headline2: GoogleFonts.roboto(
-        color: Colors.black54,
+        color: Colors.black87,
         fontSize: 24,
         fontWeight: FontWeight.w800,
       ),
       headline3: GoogleFonts.roboto(
-        color: Colors.black54,
+        color: Colors.black87,
         fontSize: 22,
         fontWeight: FontWeight.w700,
       ),
       headline4: GoogleFonts.roboto(
-        color: Colors.black54,
+        color: Colors.black87,
         fontSize: 20,
         fontWeight: FontWeight.w600,
       ),
       headline5: GoogleFonts.roboto(
-        color: Colors.black54,
+        color: Colors.black87,
         fontSize: 18,
         fontWeight: FontWeight.normal,
       ),
       headline6: GoogleFonts.roboto(
-        color: Colors.black54,
+        color: Colors.black87,
         fontSize: 16,
         fontWeight: FontWeight.normal,
       ),

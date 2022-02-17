@@ -26,6 +26,13 @@ class ChangePasswordPage extends GetView<ChangePasswordController> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
+                  Image.asset('assets/images/logo.png', height: 80),
+                  const SizedBox(height: 16),
+                  Text(
+                    'Update your account password',
+                    style: Get.textTheme.headline5,
+                  ),
+                  const SizedBox(height: 16),
                   TextFormField(
                     controller: _oldPasswordController,
                     obscureText: controller.oldPasswordObscure.value,
