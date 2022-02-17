@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.easy_biller">
+    package="com.ittouchbd.easy_biller">
    <application
         android:label="easy_biller"
         android:name="${applicationName}"

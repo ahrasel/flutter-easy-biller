@@ -1,4 +1,4 @@
-package com.example.easy_biller
+package com.ittouchbd.easy_biller
 
 import io.flutter.embedding.android.FlutterActivity
 
