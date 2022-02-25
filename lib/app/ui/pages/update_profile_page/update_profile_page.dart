@@ -20,6 +20,9 @@ class UpdateProfilePage extends GetView<UpdateProfileController> {
 
   final _formKey = GlobalKey<FormState>();
 
+  late DateTime _selectedDate;
+  late String _selectedGender;
+
   UpdateProfilePage({Key? key}) : super(key: key);
 
   Future<void> _loadUserData() async {
@@ -29,8 +32,11 @@ class UpdateProfilePage extends GetView<UpdateProfileController> {
     _emailController.text = user.email;
     _phoneNumberController.text = user.phoneNumber;
     _addressController.text = user.address!;
-    // get string date form dob datetime
-    _dobController.text = user.dob.toString();
+    // format dob datetime form user
+    _dobController.text =
+        "${user.dob!.day}/${user.dob!.month}/${user.dob!.year}";
+    _selectedDate = user.dob!;
+    _selectedGender = user.gender!;
   }
 
   @override
@@ -98,6 +104,7 @@ class UpdateProfilePage extends GetView<UpdateProfileController> {
                           onConfirm: (date) {
                             _dobController.text =
                                 "${date.day}/${date.month}/${date.year}";
+                            _selectedDate = date;
                           },
                           currentTime: DateTime.now(),
                           locale: LocaleType.en,
@@ -124,7 +131,17 @@ class UpdateProfilePage extends GetView<UpdateProfileController> {
                   child: ElevatedButton(
                     onPressed: () {
                       if (_formKey.currentState!.validate()) {
-                        controller.updateUser();
+                        controller.updateUser(
+                          user: AppUser(
+                            firstName: _firstNameController.text,
+                            lastName: _lastNameController.text,
+                            email: _emailController.text,
+                            phoneNumber: _phoneNumberController.text,
+                            address: _addressController.text,
+                            dob: _selectedDate,
+                            id: controller.userId,
+                          ),
+                        );
                       }
                     },
                     child: Text(

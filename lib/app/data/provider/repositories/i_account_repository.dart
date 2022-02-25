@@ -8,4 +8,9 @@ abstract class IAccountRepository {
     required String oldPassword,
     required String newPassword,
   });
+
+  Future<Either<FirestoreFailure, Unit>> updateUser({required AppUser user});
+
+  // user id getter
+  String get userId;
 }
