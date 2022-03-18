@@ -1,3 +1,11 @@
+import '../bindings/category_details_binding.dart';
+import '../ui/pages/category_details_page/category_details_page.dart';
+import '../bindings/category_update_binding.dart';
+import '../ui/pages/category_update_page/category_update_page.dart';
+import '../bindings/category_create_binding.dart';
+import '../ui/pages/category_create_page/category_create_page.dart';
+import '../bindings/category_list_binding.dart';
+import '../ui/pages/category_list_page/category_list_page.dart';
 import 'package:get/get.dart';
 
 import '../bindings/account_binding.dart';
@@ -110,6 +118,30 @@ class AppPages {
       name: AppRoutes.usersDetails,
       page: UsersDetailsPage.new,
       binding: UsersDetailsBinding(),
+      transition: _defaultTransition,
+    ),
+    GetPage(
+      name: AppRoutes.categoryList,
+      page: CategoryListPage.new,
+      binding: CategoryListBinding(),
+      transition: _defaultTransition,
+    ),
+    GetPage(
+      name: AppRoutes.categoryCreate,
+      page: CategoryCreatePage.new,
+      binding: CategoryCreateBinding(),
+      transition: _defaultTransition,
+    ),
+    GetPage(
+      name: AppRoutes.categoryUpdate,
+      page: CategoryUpdatePage.new,
+      binding: CategoryUpdateBinding(),
+      transition: _defaultTransition,
+    ),
+    GetPage(
+      name: AppRoutes.categoryDetails,
+      page: CategoryDetailsPage.new,
+      binding: CategoryDetailsBinding(),
       transition: _defaultTransition,
     ),
   ];
