@@ -8,4 +8,8 @@ class AppRoutes {
   static const changePassword = '/change-password';
   static const settings = '/settings';
   static const updateProfile = '/update-profile';
+  static const usersList = '/users-list';
+  static const usersCreate = '/users-create';
+  static const usersUpdate = '/users-update';
+  static const usersDetails = '/users-details';
 }
