@@ -16,4 +16,8 @@ class AppRoutes {
   static const categoryCreate = '/category-create';
   static const categoryUpdate = '/category-update';
   static const categoryDetails = '/category-details';
+  static const productList = '/product-list';
+  static const productCreate = '/product-create';
+  static const productUpdate = '/product-update';
+  static const productDetails = '/product-details';
 }

@@ -1,3 +1,11 @@
+import '../bindings/product_details_binding.dart';
+import '../ui/pages/product_details_page/product_details_page.dart';
+import '../bindings/product_update_binding.dart';
+import '../ui/pages/product_update_page/product_update_page.dart';
+import '../bindings/product_create_binding.dart';
+import '../ui/pages/product_create_page/product_create_page.dart';
+import '../bindings/product_list_binding.dart';
+import '../ui/pages/product_list_page/product_list_page.dart';
 import '../bindings/category_details_binding.dart';
 import '../ui/pages/category_details_page/category_details_page.dart';
 import '../bindings/category_update_binding.dart';
@@ -142,6 +150,30 @@ class AppPages {
       name: AppRoutes.categoryDetails,
       page: CategoryDetailsPage.new,
       binding: CategoryDetailsBinding(),
+      transition: _defaultTransition,
+    ),
+    GetPage(
+      name: AppRoutes.productList,
+      page: ProductListPage.new,
+      binding: ProductListBinding(),
+      transition: _defaultTransition,
+    ),
+    GetPage(
+      name: AppRoutes.productCreate,
+      page: ProductCreatePage.new,
+      binding: ProductCreateBinding(),
+      transition: _defaultTransition,
+    ),
+    GetPage(
+      name: AppRoutes.productUpdate,
+      page: ProductUpdatePage.new,
+      binding: ProductUpdateBinding(),
+      transition: _defaultTransition,
+    ),
+    GetPage(
+      name: AppRoutes.productDetails,
+      page: ProductDetailsPage.new,
+      binding: ProductDetailsBinding(),
       transition: _defaultTransition,
     ),
   ];
