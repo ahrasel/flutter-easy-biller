@@ -20,4 +20,8 @@ class AppRoutes {
   static const productCreate = '/product-create';
   static const productUpdate = '/product-update';
   static const productDetails = '/product-details';
+  static const clientList = '/client-list';
+  static const clientCreate = '/client-create';
+  static const clientUpdate = '/client-update';
+  static const clientDetails = '/client-details';
 }

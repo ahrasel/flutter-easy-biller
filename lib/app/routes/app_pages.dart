@@ -1,3 +1,11 @@
+import '../bindings/client_details_binding.dart';
+import '../ui/pages/client_details_page/client_details_page.dart';
+import '../bindings/client_update_binding.dart';
+import '../ui/pages/client_update_page/client_update_page.dart';
+import '../bindings/client_create_binding.dart';
+import '../ui/pages/client_create_page/client_create_page.dart';
+import '../bindings/client_list_binding.dart';
+import '../ui/pages/client_list_page/client_list_page.dart';
 import '../bindings/product_details_binding.dart';
 import '../ui/pages/product_details_page/product_details_page.dart';
 import '../bindings/product_update_binding.dart';
@@ -174,6 +182,30 @@ class AppPages {
       name: AppRoutes.productDetails,
       page: ProductDetailsPage.new,
       binding: ProductDetailsBinding(),
+      transition: _defaultTransition,
+    ),
+    GetPage(
+      name: AppRoutes.clientList,
+      page: ClientListPage.new,
+      binding: ClientListBinding(),
+      transition: _defaultTransition,
+    ),
+    GetPage(
+      name: AppRoutes.clientCreate,
+      page: ClientCreatePage.new,
+      binding: ClientCreateBinding(),
+      transition: _defaultTransition,
+    ),
+    GetPage(
+      name: AppRoutes.clientUpdate,
+      page: ClientUpdatePage.new,
+      binding: ClientUpdateBinding(),
+      transition: _defaultTransition,
+    ),
+    GetPage(
+      name: AppRoutes.clientDetails,
+      page: ClientDetailsPage.new,
+      binding: ClientDetailsBinding(),
       transition: _defaultTransition,
     ),
   ];
