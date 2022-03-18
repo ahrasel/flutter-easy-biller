@@ -27,7 +27,7 @@ class MainController extends BaseController {
         appbarTitle.value = "Settings";
 
         break;
-      case 25:
+      case 0:
         signOut();
         break;
       default:

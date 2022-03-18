@@ -50,39 +50,50 @@ class HomeLayout extends GetView<MainController> {
                 ),
                 PopupMenuItem<int>(
                   child: _actionWithText('Logout', Icons.logout),
-                  value: 25,
+                  value: 0,
                 ),
               ],
             ),
             const SizedBox(width: 8),
           ],
         ),
-        drawer: Drawer(),
+        drawer: Drawer(
+          child: ListView(
+            children: [
+              const DrawerHeader(
+                child: Padding(
+                  padding: EdgeInsets.all(10.0),
+                  child: CircleAvatar(
+                    backgroundImage: AssetImage('assets/images/avatar.jpg'),
+                    radius: 20,
+                  ),
+                ),
+                decoration: BoxDecoration(
+                  color: Colors.blue,
+                ),
+              ),
+              _drawerItem('Home', Icons.home, 1, true),
+              _drawerItem('Users', Icons.people, 101, false),
+              _drawerItem('Products', Icons.inventory_outlined, 101, false),
+              _drawerItem('Logout', Icons.home, 101, false),
+            ],
+          ),
+        ),
         body: Column(
           children: [
             Expanded(child: child),
           ],
         ),
-        // bottomNavigationBar: Obx(
-        //   () => BottomNavigationBar(
-        //     items: const [
-        //       BottomNavigationBarItem(
-        //         icon: Icon(Icons.dashboard),
-        //         label: 'Home',
-        //       ),
-        //       BottomNavigationBarItem(
-        //         icon: Icon(Icons.inventory_outlined),
-        //         label: 'Invoices',
-        //       ),
-        //       BottomNavigationBarItem(
-        //         icon: Icon(Icons.person_pin),
-        //         label: 'Account',
-        //       ),
-        //     ],
-        //     currentIndex: controller.currentIndex.value,
-        //     onTap: (index) => controller.currentIndex.value = index,
-        //   ),
-        // ),
+      );
+
+  ListTile _drawerItem(
+          String text, IconData icon, int index, bool isSelected) =>
+      ListTile(
+        leading: Icon(icon),
+        title: Text(text, style: Get.textTheme.subtitle1),
+        onTap: () => controller.onChangeMoreAction(index),
+        selected: isSelected,
+        selectedTileColor: Colors.blue[100],
       );
 
   Row _actionWithText(String text, IconData icon) => Row(
