@@ -47,6 +47,7 @@ dependencies:
 
   google_fonts: ^2.3.1
   flutter_datetime_picker: ^1.5.1
+  lottie: ^1.2.2
 
 dev_dependencies:
   flutter_test:
@@ -75,3 +76,4 @@ flutter:
 
   assets:
     - assets/images/
+    - assets/animations/

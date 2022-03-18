@@ -7,7 +7,7 @@ class SplashController extends BaseController {
   @override
   void onInit() {
     super.onInit();
-    Future.delayed(const Duration(seconds: 3), () {
+    Future.delayed(const Duration(seconds: 4), () {
       if (isAuthenticated()) {
         Get.offAllNamed(AppRoutes.home);
       } else {
