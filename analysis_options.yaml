@@ -27,7 +27,7 @@ linter:
     - prefer_collection_literals
     - avoid_function_literals_in_foreach_calls
     - avoid_init_to_null
-    - prefer_expression_function_bodies
+    # - prefer_expression_function_bodies
     - prefer_initializing_formals
     - type_init_formals
     - empty_constructor_bodies

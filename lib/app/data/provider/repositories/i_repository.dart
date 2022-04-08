@@ -1,7 +1,4 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:dartz/dartz.dart';
-import 'package:easy_biller/app/data/failures/firestore_failure.dart';
-import 'package:easy_biller/app/data/models/appuser/appuser.dart';
 
 abstract class IRepository {
   Future<bool> existWithKey(

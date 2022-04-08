@@ -1,12 +1,10 @@
-
 import 'package:get/get.dart';
 import '../controllers/product_details_controller.dart';
-
 
 class ProductDetailsBinding implements Bindings {
   @override
   void dependencies() {
-    Get.lazyPut<ProductDetailsController>(() => ProductDetailsController());
-        // Get.put<ProductDetailsController>(ProductDetailsController());
+    Get.lazyPut<ProductDetailsController>(ProductDetailsController.new);
+    // Get.put<ProductDetailsController>(ProductDetailsController());
   }
 }

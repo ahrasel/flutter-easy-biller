@@ -21,7 +21,6 @@ class UpdateProfilePage extends GetView<UpdateProfileController> {
   final _formKey = GlobalKey<FormState>();
 
   late DateTime _selectedDate;
-  late String _selectedGender;
 
   UpdateProfilePage({Key? key}) : super(key: key);
 
@@ -36,7 +35,6 @@ class UpdateProfilePage extends GetView<UpdateProfileController> {
     _dobController.text =
         "${user.dob!.day}/${user.dob!.month}/${user.dob!.year}";
     _selectedDate = user.dob!;
-    _selectedGender = user.gender!;
   }
 
   @override
